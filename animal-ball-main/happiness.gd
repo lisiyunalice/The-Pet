@@ -1,4 +1,6 @@
-extends Sprite2D
+extends HBoxContainer
+@export var icon : Texture2D
+@export var minigame: PackedScene
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
@@ -14,12 +16,11 @@ var timer: Timer
 
 func _ready():
 	 # 初始化进度条
-	progress_bar.max_value = max_A
-	progress_bar.value = A
+	$TextureButton.texture_normal = icon
 	
 	# 创建计时器
 	timer = Timer.new()
-	timer.wait_time = 30.0  # 每 30 秒触发一次
+	timer.wait_time = 5.0  # 每 30 秒触发一次
 	timer.one_shot = false  # 不只执行一次，循环触发
 	timer.autostart = true  # 自动启动
 	add_child(timer)
@@ -35,3 +36,10 @@ func _on_timer_timeout():
 	else:
 		print("A 已经降到 0，不再减少。")
 		timer.stop()
+
+
+func _on_texture_button_button_down() -> void:
+	print("Hi")
+	# get_tree().change_scene_to_file("res://LoremIpsum.tscn")
+	get_tree().change_scene_to_packed(minigame)
+	pass # Replace with function body.
