@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="the pet"
-run/main_scene="uid://cm1bygewdohjq"
+run/main_scene="uid://cs4nfe3dgs2sa"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

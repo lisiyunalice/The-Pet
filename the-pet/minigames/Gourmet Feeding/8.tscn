@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://kk4ol0ht86h4"]
+
+[ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_o67ta"]
+[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_3qhnc"]
+[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Gourmet Feeding/9.tscn" id="2_t2o6k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3qhnc"]
+radius = 15.0
+
+[node name="8" type="Node2D"]
+
+[node name="mini whole cake 8" type="RigidBody2D" parent="."]
+script = ExtResource("1_o67ta")
+level = 8
+next_treat_scene = ExtResource("2_t2o6k")
+
+[node name="mini whole cake 8" type="CollisionShape2D" parent="mini whole cake 8"]
+scale = Vector2(6.2, 6.2)
+shape = SubResource("CircleShape2D_3qhnc")
+
+[node name="Sprite2D" type="Sprite2D" parent="mini whole cake 8"]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_3qhnc")

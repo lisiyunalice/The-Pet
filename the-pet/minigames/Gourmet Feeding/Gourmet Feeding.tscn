@@ -1,0 +1,52 @@
+[gd_scene load_steps=14 format=3 uid="uid://b4fd7y6b0v4w1"]
+
+[ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Gourmet Feeding/GourmetFeeding.gd" id="1_yt2j1"]
+[ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Gourmet Feeding/1.tscn" id="2_fkfoo"]
+[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_k477n"]
+[ext_resource type="PackedScene" uid="uid://bbuwngudi4dui" path="res://minigames/Gourmet Feeding/2.tscn" id="3_snh64"]
+[ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Gourmet Feeding/3.tscn" id="4_iarp1"]
+[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Gourmet Feeding/4.tscn" id="5_rer42"]
+[ext_resource type="PackedScene" uid="uid://ypu38ami7e0i" path="res://minigames/Gourmet Feeding/5.tscn" id="6_8g64y"]
+[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Gourmet Feeding/6.tscn" id="7_i56oq"]
+[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Gourmet Feeding/7.tscn" id="8_inlor"]
+[ext_resource type="PackedScene" uid="uid://kk4ol0ht86h4" path="res://minigames/Gourmet Feeding/8.tscn" id="9_l4rcw"]
+[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Gourmet Feeding/9.tscn" id="10_o5d41"]
+[ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Gourmet Feeding/10.tscn" id="11_tkkxt"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fkfoo"]
+a = Vector2(0, 494)
+b = Vector2(0, -2)
+
+[node name="GourmetFeeding" type="Node2D"]
+script = ExtResource("1_yt2j1")
+treat_level_1_scene = ExtResource("2_fkfoo")
+treat_level_2_scene = ExtResource("3_snh64")
+treat_level_3_scene = ExtResource("4_iarp1")
+treat_level_4_scene = ExtResource("5_rer42")
+treat_level_5_scene = ExtResource("6_8g64y")
+treat_level_6_scene = ExtResource("7_i56oq")
+treat_level_7_scene = ExtResource("8_inlor")
+treat_level_8_scene = ExtResource("9_l4rcw")
+treat_level_9_scene = ExtResource("10_o5d41")
+treat_level_10_scene = ExtResource("11_tkkxt")
+
+[node name="Bowl" type="StaticBody2D" parent="."]
+
+[node name="bottom" type="CollisionShape2D" parent="Bowl"]
+position = Vector2(775.00006, 569.0002)
+rotation = 1.5707964
+scale = Vector2(0.81, 0.81)
+shape = SubResource("SegmentShape2D_fkfoo")
+
+[node name="right wall" type="CollisionShape2D" parent="Bowl"]
+position = Vector2(776, 74)
+shape = SubResource("SegmentShape2D_fkfoo")
+
+[node name="left wall" type="CollisionShape2D" parent="Bowl"]
+position = Vector2(376, 74)
+shape = SubResource("SegmentShape2D_fkfoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bowl"]
+position = Vector2(576, 320)
+scale = Vector2(3.125, 3.91)
+texture = ExtResource("2_k477n")

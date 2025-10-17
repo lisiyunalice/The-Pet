@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d07qhkuljiahi"]
+
+[ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_er4sd"]
+[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Gourmet Feeding/4.tscn" id="2_ladco"]
+[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_x0c0i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x0c0i"]
+radius = 15.0
+
+[node name="3" type="Node2D"]
+
+[node name="tiny chocolate chip 3" type="RigidBody2D" parent="."]
+script = ExtResource("1_er4sd")
+level = 3
+next_treat_scene = ExtResource("2_ladco")
+
+[node name="tiny chocolate chip 3" type="CollisionShape2D" parent="tiny chocolate chip 3"]
+scale = Vector2(1.7, 1.7)
+shape = SubResource("CircleShape2D_x0c0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="tiny chocolate chip 3"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_x0c0i")

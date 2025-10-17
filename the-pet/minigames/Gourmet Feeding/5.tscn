@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ypu38ami7e0i"]
+
+[ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_kk2sl"]
+[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_513t6"]
+[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Gourmet Feeding/6.tscn" id="2_c03xs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_513t6"]
+radius = 15.0
+
+[node name="5" type="Node2D"]
+
+[node name="donut 5" type="RigidBody2D" parent="."]
+script = ExtResource("1_kk2sl")
+level = 5
+next_treat_scene = ExtResource("2_c03xs")
+
+[node name="donut 5" type="CollisionShape2D" parent="donut 5"]
+scale = Vector2(2.9, 2.9)
+shape = SubResource("CircleShape2D_513t6")
+
+[node name="Sprite2D" type="Sprite2D" parent="donut 5"]
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_513t6")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmo0nfkqo3o7a"]
+
+[ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_tenga"]
+[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Gourmet Feeding/7.tscn" id="2_1uups"]
+[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_qgw2y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgw2y"]
+radius = 15.0
+
+[node name="6" type="Node2D"]
+
+[node name="cupcake 6" type="RigidBody2D" parent="."]
+script = ExtResource("1_tenga")
+level = 6
+next_treat_scene = ExtResource("2_1uups")
+
+[node name="cupcake 6" type="CollisionShape2D" parent="cupcake 6"]
+scale = Vector2(3.7, 3.7)
+shape = SubResource("CircleShape2D_qgw2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="cupcake 6"]
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("2_qgw2y")
