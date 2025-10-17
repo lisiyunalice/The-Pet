@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cowo3oe3i6ga0"]
+
+[ext_resource type="Script" uid="uid://bwnxiy00n0dga" path="res://happiness.gd" id="1_2qpkh"]
+[ext_resource type="Texture2D" uid="uid://dmcv7bkpukuh3" path="res://happiness.png" id="2_lr6xt"]
+
+[node name="Meter" type="HBoxContainer"]
+offset_left = 370.0
+offset_top = 170.0
+offset_right = 20270.0
+offset_bottom = 4337.0
+scale = Vector2(0.01, 0.01)
+script = ExtResource("1_2qpkh")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("2_lr6xt")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 64
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
