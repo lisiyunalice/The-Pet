@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmyngxvokgwai"]
 
 [ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_ohhcp"]
-[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_5qd4q"]
 [ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Gourmet Feeding/10.tscn" id="2_ajkvh"]
+[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Gourmet Feeding/balls/item318.png" id="3_ajkvh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qd4q"]
 radius = 15.0
@@ -14,10 +14,11 @@ script = ExtResource("1_ohhcp")
 level = 9
 next_treat_scene = ExtResource("2_ajkvh")
 
+[node name="Item318" type="Sprite2D" parent="triple-tier cake 9"]
+position = Vector2(-8, -8)
+scale = Vector2(11, 11)
+texture = ExtResource("3_ajkvh")
+
 [node name="triple-tier cake 9" type="CollisionShape2D" parent="triple-tier cake 9"]
 scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_5qd4q")
-
-[node name="Sprite2D" type="Sprite2D" parent="triple-tier cake 9"]
-scale = Vector2(1.43, 1.43)
-texture = ExtResource("2_5qd4q")

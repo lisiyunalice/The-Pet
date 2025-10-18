@@ -1,36 +1,222 @@
-[gd_scene load_steps=14 format=3 uid="uid://b4fd7y6b0v4w1"]
+[gd_scene load_steps=20 format=3 uid="uid://b4fd7y6b0v4w1"]
 
 [ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Gourmet Feeding/GourmetFeeding.gd" id="1_yt2j1"]
-[ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Gourmet Feeding/1.tscn" id="2_fkfoo"]
-[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_k477n"]
-[ext_resource type="PackedScene" uid="uid://bbuwngudi4dui" path="res://minigames/Gourmet Feeding/2.tscn" id="3_snh64"]
-[ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Gourmet Feeding/3.tscn" id="4_iarp1"]
-[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Gourmet Feeding/4.tscn" id="5_rer42"]
-[ext_resource type="PackedScene" uid="uid://ypu38ami7e0i" path="res://minigames/Gourmet Feeding/5.tscn" id="6_8g64y"]
-[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Gourmet Feeding/6.tscn" id="7_i56oq"]
-[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Gourmet Feeding/7.tscn" id="8_inlor"]
-[ext_resource type="PackedScene" uid="uid://kk4ol0ht86h4" path="res://minigames/Gourmet Feeding/8.tscn" id="9_l4rcw"]
-[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Gourmet Feeding/9.tscn" id="10_o5d41"]
-[ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Gourmet Feeding/10.tscn" id="11_tkkxt"]
+[ext_resource type="Texture2D" uid="uid://dils8clmrq8w4" path="res://minigames/Gourmet Feeding/background/Grass.png" id="12_o0686"]
+[ext_resource type="Texture2D" uid="uid://n6wdpgea5rj6" path="res://minigames/Gourmet Feeding/balls/item310.png" id="13_67evo"]
+[ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Gourmet Feeding/balls/item311.png" id="14_js0av"]
+[ext_resource type="Texture2D" uid="uid://drkcio5s22db4" path="res://minigames/Gourmet Feeding/balls/item312.png" id="15_6fley"]
+[ext_resource type="Texture2D" uid="uid://cjpgtholip6y2" path="res://minigames/Gourmet Feeding/balls/item313.png" id="16_triqx"]
+[ext_resource type="Texture2D" uid="uid://cvumvsen78n8u" path="res://minigames/Gourmet Feeding/balls/item314.png" id="17_qfn5j"]
+[ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Gourmet Feeding/balls/item315.png" id="18_nchp8"]
+[ext_resource type="Texture2D" uid="uid://brpnw77atsacd" path="res://minigames/Gourmet Feeding/balls/item316.png" id="19_wq1fx"]
+[ext_resource type="Texture2D" uid="uid://dm3ytvirtxrhh" path="res://minigames/Gourmet Feeding/balls/item317.png" id="20_hw8eu"]
+[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Gourmet Feeding/balls/item318.png" id="21_m61j1"]
+[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Gourmet Feeding/balls/item319.png" id="22_7pcvp"]
+[ext_resource type="Texture2D" uid="uid://cdljfrkp5lbvl" path="res://minigames/Gourmet Feeding/background/Tilled_Dirt_Wide_v2.png" id="23_ijsrh"]
+[ext_resource type="Texture2D" uid="uid://bli0d6d5rdfqh" path="res://minigames/Gourmet Feeding/background/Fences.png" id="24_67evo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fkfoo"]
 a = Vector2(0, 494)
 b = Vector2(0, -2)
 
+[sub_resource type="LabelSettings" id="LabelSettings_67evo"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_js0av"]
+font_size = 90
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_6fley"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_triqx"]
+font_size = 30
+
 [node name="GourmetFeeding" type="Node2D"]
 script = ExtResource("1_yt2j1")
-treat_level_1_scene = ExtResource("2_fkfoo")
-treat_level_2_scene = ExtResource("3_snh64")
-treat_level_3_scene = ExtResource("4_iarp1")
-treat_level_4_scene = ExtResource("5_rer42")
-treat_level_5_scene = ExtResource("6_8g64y")
-treat_level_6_scene = ExtResource("7_i56oq")
-treat_level_7_scene = ExtResource("8_inlor")
-treat_level_8_scene = ExtResource("9_l4rcw")
-treat_level_9_scene = ExtResource("10_o5d41")
-treat_level_10_scene = ExtResource("11_tkkxt")
 
 [node name="Bowl" type="StaticBody2D" parent="."]
+
+[node name="Grass" type="Sprite2D" parent="Bowl"]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(11.999999, 20.25)
+texture = ExtResource("12_o0686")
+region_enabled = true
+region_rect = Rect2(0, 80, 96, 32)
+
+[node name="Item310" type="Sprite2D" parent="Bowl"]
+position = Vector2(968, 56)
+scale = Vector2(4, 4)
+texture = ExtResource("13_67evo")
+
+[node name="Item311" type="Sprite2D" parent="Bowl"]
+position = Vector2(1018, 106)
+scale = Vector2(4, 4)
+texture = ExtResource("14_js0av")
+
+[node name="Item312" type="Sprite2D" parent="Bowl"]
+position = Vector2(968, 176)
+scale = Vector2(4, 4)
+texture = ExtResource("15_6fley")
+
+[node name="Item313" type="Sprite2D" parent="Bowl"]
+position = Vector2(1018, 226)
+scale = Vector2(4, 4)
+texture = ExtResource("16_triqx")
+
+[node name="Item314" type="Sprite2D" parent="Bowl"]
+position = Vector2(968, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("17_qfn5j")
+
+[node name="Item315" type="Sprite2D" parent="Bowl"]
+position = Vector2(1018, 346)
+scale = Vector2(4, 4)
+texture = ExtResource("18_nchp8")
+
+[node name="Item316" type="Sprite2D" parent="Bowl"]
+position = Vector2(968, 416)
+scale = Vector2(4, 4)
+texture = ExtResource("19_wq1fx")
+
+[node name="Item317" type="Sprite2D" parent="Bowl"]
+position = Vector2(1018, 466)
+scale = Vector2(4, 4)
+texture = ExtResource("20_hw8eu")
+
+[node name="Item318" type="Sprite2D" parent="Bowl"]
+position = Vector2(968, 536)
+scale = Vector2(4, 4)
+texture = ExtResource("21_m61j1")
+
+[node name="Item319" type="Sprite2D" parent="Bowl"]
+position = Vector2(1018, 586)
+scale = Vector2(4, 4)
+texture = ExtResource("22_7pcvp")
+
+[node name="TilledDirtWideV2" type="Sprite2D" parent="Bowl"]
+position = Vector2(576, 320)
+scale = Vector2(14, 15.5)
+texture = ExtResource("23_ijsrh")
+region_enabled = true
+region_rect = Rect2(128, 80, 32, 32)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl"]
+position = Vector2(400, 568)
+scale = Vector2(3, 3)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom"]
+position = Vector2(16, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom"]
+position = Vector2(31.999989, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom2"]
+position = Vector2(16, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom3" type="Sprite2D" parent="Bowl/Fencesbottom"]
+position = Vector2(64, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3"]
+position = Vector2(16, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3"]
+position = Vector2(31.999989, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3/Fencesbottom2"]
+position = Vector2(16, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 16, 11)
+
+[node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3/Fencesbottom2/Fencesbottom"]
+position = Vector2(10.666666, 0)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(21, 33, 6, 11)
+
+[node name="Fences" type="Sprite2D" parent="Bowl"]
+position = Vector2(384, 120)
+scale = Vector2(3, 3)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences2" type="Sprite2D" parent="Bowl/Fences"]
+position = Vector2(-1.9073486e-06, 32.000004)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences4" type="Sprite2D" parent="Bowl/Fences"]
+position = Vector2(0, 128)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences3" type="Sprite2D" parent="Bowl/Fences"]
+position = Vector2(0, 96)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences" type="Sprite2D" parent="Bowl/Fences"]
+position = Vector2(0, 63.999996)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences5" type="Sprite2D" parent="Bowl/Fences"]
+position = Vector2(128.33333, 1.2715659e-06)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences2" type="Sprite2D" parent="Bowl/Fences/Fences5"]
+position = Vector2(-1.9073486e-06, 32.000004)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences4" type="Sprite2D" parent="Bowl/Fences/Fences5"]
+position = Vector2(0, 128)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences3" type="Sprite2D" parent="Bowl/Fences/Fences5"]
+position = Vector2(0, 96)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
+
+[node name="Fences" type="Sprite2D" parent="Bowl/Fences/Fences5"]
+position = Vector2(0, 63.999996)
+texture = ExtResource("24_67evo")
+region_enabled = true
+region_rect = Rect2(5, 1, 6, 32)
 
 [node name="bottom" type="CollisionShape2D" parent="Bowl"]
 position = Vector2(775.00006, 569.0002)
@@ -46,7 +232,77 @@ shape = SubResource("SegmentShape2D_fkfoo")
 position = Vector2(376, 74)
 shape = SubResource("SegmentShape2D_fkfoo")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bowl"]
-position = Vector2(576, 320)
-scale = Vector2(3.125, 3.91)
-texture = ExtResource("2_k477n")
+[node name="DropCooldownTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 229.0
+offset_bottom = 101.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_67evo")
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="overlay" type="ColorRect" parent="GameOverLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.011764706, 0.011764706, 0.011764706, 0.7058824)
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -324.0
+offset_right = 244.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverLayer/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="gameover" type="Label" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_js0av")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreDisplayLabel" type="Label" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Score : "
+label_settings = SubResource("LabelSettings_6fley")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry button" type="Button" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+action_mode = 0
+text = "Retry?"
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="NextTreatPreview" type="Sprite2D" parent="."]
+position = Vector2(176, 416)
+scale = Vector2(9, 9)
+texture = ExtResource("13_67evo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 280.0
+offset_right = 256.0
+offset_bottom = 322.0
+text = "Next Ingot"
+label_settings = SubResource("LabelSettings_triqx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="DropCooldownTimer" to="." method="_on_drop_cooldown_timer_timeout"]

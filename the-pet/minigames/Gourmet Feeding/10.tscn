@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://pphit1wrma2m"]
 
 [ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Gourmet Feeding/Treat.gd" id="1_0ak5y"]
-[ext_resource type="Texture2D" uid="uid://0qrpkeg50u0s" path="res://icon.svg" id="2_ddq78"]
+[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Gourmet Feeding/balls/item319.png" id="2_ddq78"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddq78"]
 radius = 15.0
@@ -16,8 +16,6 @@ level = 10
 scale = Vector2(10.4, 10.4)
 shape = SubResource("CircleShape2D_ddq78")
 
-[node name="Sprite2D" type="Sprite2D" parent="dessert palace 10"]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-scale = Vector2(1.84, 1.84)
+[node name="Item319" type="Sprite2D" parent="dessert palace 10"]
+scale = Vector2(16, 16)
 texture = ExtResource("2_ddq78")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n6wdpgea5rj6"
-path="res://.godot/imported/item310.png-f53945568ebc30714fce82efb9ad2efe.ctex"
+uid="uid://bmqar60bdjr8k"
+path="res://.godot/imported/item318.png-f64bc9211ec1ff4ead20ec4cb9d7b8fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Gourmet Feeding/item310.png"
-dest_files=["res://.godot/imported/item310.png-f53945568ebc30714fce82efb9ad2efe.ctex"]
+source_file="res://minigames/Gourmet Feeding/balls/item318.png"
+dest_files=["res://.godot/imported/item318.png-f64bc9211ec1ff4ead20ec4cb9d7b8fd.ctex"]
 
 [params]
 
