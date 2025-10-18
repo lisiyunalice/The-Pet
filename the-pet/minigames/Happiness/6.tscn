@@ -24,6 +24,6 @@ debug_color = Color(0.5882353, 1, 0.5686275, 1)
 scale = Vector2(2.2291667, 2.2291667)
 texture = ExtResource("3_s1j73")
 
-[node name="Item315" type="Sprite2D" parent="cupcake 6"]
-scale = Vector2(5.4999995, 5.4999995)
+[node name="Item315" type="Sprite2D" parent="cupcake 6/BallColor"]
+scale = Vector2(2.4672894, 2.4672894)
 texture = ExtResource("3_1uups")

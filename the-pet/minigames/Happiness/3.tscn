@@ -24,7 +24,7 @@ debug_color = Color(0.5882353, 1, 0.5686275, 1)
 scale = Vector2(1.0416666, 1.0416666)
 texture = ExtResource("3_6qmmd")
 
-[node name="Item312" type="Sprite2D" parent="tiny chocolate chip 3"]
-position = Vector2(-2.3841858e-07, -2.3841858e-07)
-scale = Vector2(2.5, 2.5)
+[node name="Item312" type="Sprite2D" parent="tiny chocolate chip 3/BallColor"]
+position = Vector2(-2.2888185e-07, -2.2888185e-07)
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("3_ladco")

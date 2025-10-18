@@ -25,7 +25,7 @@ position = Vector2(-0.50000215, -0.50000215)
 scale = Vector2(2.8958333, 2.8958333)
 texture = ExtResource("3_s8bi4")
 
-[node name="Item316" type="Sprite2D" parent="cake slice 7"]
-position = Vector2(2.3841858e-07, 2.3841858e-07)
-scale = Vector2(7.34375, 7.34375)
+[node name="Item316" type="Sprite2D" parent="cake slice 7/BallColor"]
+position = Vector2(0.1726627, 0.1726627)
+scale = Vector2(2.5359712, 2.5359712)
 texture = ExtResource("3_n73n6")

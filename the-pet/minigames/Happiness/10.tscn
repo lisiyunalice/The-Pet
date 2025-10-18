@@ -23,6 +23,7 @@ position = Vector2(-1.9999924, -1.9999924)
 scale = Vector2(6.2499995, 6.2499995)
 texture = ExtResource("2_7xt6s")
 
-[node name="Item319" type="Sprite2D" parent="dessert palace 10"]
-scale = Vector2(16, 16)
+[node name="Item319" type="Sprite2D" parent="dessert palace 10/BallColor"]
+position = Vector2(0.3199988, 0.3199988)
+scale = Vector2(2.5600002, 2.5600002)
 texture = ExtResource("2_ddq78")
