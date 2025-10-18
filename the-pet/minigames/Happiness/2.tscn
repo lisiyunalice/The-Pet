@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbuwngudi4dui"]
+[gd_scene load_steps=6 format=3 uid="uid://bbuwngudi4dui"]
 
 [ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Happiness/Treat.gd" id="1_qy2wx"]
 [ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Happiness/3.tscn" id="2_l4lpx"]
+[ext_resource type="Texture2D" uid="uid://datg7tnucnoi1" path="res://minigames/Happiness/balls color/ball color.png" id="3_35wbr"]
 [ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Happiness/balls/item311.png" id="3_l4lpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3f70"]
@@ -18,6 +19,10 @@ next_treat_scene = ExtResource("2_l4lpx")
 scale = Vector2(1.3, 1.3)
 shape = SubResource("CircleShape2D_b3f70")
 debug_color = Color(0.5882353, 1, 0.5686275, 1)
+
+[node name="BallColor" type="Sprite2D" parent="cream drop 2"]
+scale = Vector2(0.7916666, 0.7916666)
+texture = ExtResource("3_35wbr")
 
 [node name="Item311" type="Sprite2D" parent="cream drop 2"]
 texture_filter = 1

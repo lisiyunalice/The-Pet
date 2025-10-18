@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmo0nfkqo3o7a"]
+[gd_scene load_steps=6 format=3 uid="uid://dmo0nfkqo3o7a"]
 
 [ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Happiness/Treat.gd" id="1_tenga"]
 [ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Happiness/7.tscn" id="2_1uups"]
 [ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Happiness/balls/item315.png" id="3_1uups"]
+[ext_resource type="Texture2D" uid="uid://datg7tnucnoi1" path="res://minigames/Happiness/balls color/ball color.png" id="3_s1j73"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qgw2y"]
 radius = 15.0
@@ -18,6 +19,10 @@ next_treat_scene = ExtResource("2_1uups")
 scale = Vector2(3.7, 3.7)
 shape = SubResource("CircleShape2D_qgw2y")
 debug_color = Color(0.5882353, 1, 0.5686275, 1)
+
+[node name="BallColor" type="Sprite2D" parent="cupcake 6"]
+scale = Vector2(2.2291667, 2.2291667)
+texture = ExtResource("3_s1j73")
 
 [node name="Item315" type="Sprite2D" parent="cupcake 6"]
 scale = Vector2(5.4999995, 5.4999995)
