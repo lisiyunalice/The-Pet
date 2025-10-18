@@ -11,16 +11,20 @@ extends Node2D
 @export var treat_level_9_scene: PackedScene
 @export var treat_level_10_scene: PackedScene
 
-@onready var score_label: Label = $ScoreLabel 
-@onready var final_score_label: Label = $GameOverLayer/CenterContainer/VBoxContainer/ScoreDisplayLabel 
+@export var all_treat_scenes: Array[PackedScene]
+
+@onready var score_label: Label = $ScoreLabel
+@onready var final_score_label: Label = $GameOverLayer/CenterContainer/VBoxContainer/ScoreDisplayLabel
 @onready var game_over_layer: CanvasLayer = $GameOverLayer
 @onready var drop_cooldown_timer: Timer = $DropCooldownTimer
 @onready var next_treat_preview: Sprite2D = $NextTreatPreview
-@onready var end_game_area: Area2D = $EndGameArea # EndGameArea 노드 추가 가정
+@onready var end_game_area: Area2D = $EndGameArea
 
-const DROP_START_Y = -50.0 
-const BOWL_WIDTH = 400.0   
-const BOWL_X_START = 376.0 
+const DROP_START_Y = -50.0
+const BOWL_WIDTH = 400.0
+const BOWL_X_START = 376.0
+const MAIN_SPRITE_NAME = "MainDessertSprite"
+const MAX_INITIAL_LEVEL = 2
 
 var treat_pool: Array[PackedScene] = []
 var current_treat_scene: PackedScene
@@ -30,7 +34,6 @@ var can_drop: bool = true
 
 func _ready():
 	add_to_group("merger")
-	
 	treat_pool = [treat_level_1_scene, treat_level_2_scene]
 	
 	randomize_next_treat()
@@ -40,20 +43,12 @@ func _ready():
 func get_texture_from_scene(scene: PackedScene) -> Texture2D:
 	var instance = scene.instantiate()
 	var texture: Texture2D = null
-	for child in instance.get_children():
-		if child is Sprite2D:
-			texture = (child as Sprite2D).texture
-			break
-		elif child.get_child_count() > 0:
-			for grand_child in child.get_children():
-				if grand_child is Sprite2D:
-					texture = (grand_child as Sprite2D).texture
-					break
-			if texture != null:
-				break
-	var sprite_node = instance.find_child("Sprite2D")
-	if sprite_node is Sprite2D:
-		texture = sprite_node.texture
+	texture = _recursive_find_sprite(instance)
+	var sprite_to_preview = instance.find_child(MAIN_SPRITE_NAME, true)
+	if sprite_to_preview == null:
+		sprite_to_preview = instance.find_child("Sprite2D", true)
+	if sprite_to_preview is Sprite2D:
+		texture = sprite_to_preview.texture
 	instance.queue_free()
 	return texture
 
@@ -63,6 +58,16 @@ func randomize_next_treat():
 		current_treat_scene = treat_pool.pick_random()
 		if current_treat_scene != null and is_instance_valid(next_treat_preview):
 			next_treat_preview.texture = get_texture_from_scene(current_treat_scene)
+
+
+func _recursive_find_sprite(node: Node) -> Texture2D:
+	if node is Sprite2D:
+		return node.texture
+	for child in node.get_children():
+		var result = _recursive_find_sprite(child)
+		if result != null:
+			return result
+	return null
 
 
 func _unhandled_input(event):
@@ -76,8 +81,8 @@ func _unhandled_input(event):
 func drop_treat(x_position):
 	if current_treat_scene == null:
 		return
-	can_drop = false 
-	drop_cooldown_timer.start() 
+	can_drop = false
+	drop_cooldown_timer.start()
 	var new_treat = current_treat_scene.instantiate()
 	add_child(new_treat)
 	new_treat.global_position = Vector2(x_position, DROP_START_Y)
@@ -91,7 +96,7 @@ func _on_drop_cooldown_timer_timeout():
 func request_merge(treat1: Treat, treat2: Treat):
 	if not is_instance_valid(treat1) or not is_instance_valid(treat2):
 		return
-	var points_to_add = (treat1.level + 1) * 10 
+	var points_to_add = (treat1.level + 1) * 10
 	add_score(points_to_add)
 	var merge_position = (treat1.global_position + treat2.global_position) / 2
 	var next_scene: PackedScene = treat1.next_treat_scene
@@ -121,7 +126,7 @@ func _on_end_game_area_body_entered(body: Node2D):
 
 
 func game_over():
-	get_tree().paused = true 
+	get_tree().paused = true
 	if is_instance_valid(game_over_layer):
 		game_over_layer.visible = true
 	if is_instance_valid(final_score_label):
@@ -131,4 +136,4 @@ func game_over():
 
 func _on_retry_button_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://minigames/Happiness/Gourmet Feeding.tscn")
+	get_tree().change_scene_to_file("res://minigames/Happiness/Gourmet Feeding.tscn") 

@@ -24,8 +24,8 @@ position = Vector2(-1.1920929e-07, -2.9802322e-08)
 scale = Vector2(0.6041666, 0.6041666)
 texture = ExtResource("3_emcpg")
 
-[node name="Sprite2D" type="Sprite2D" parent="dough piece 1/BallColor"]
+[node name="Sprite2D" type="Sprite2D" parent="dough piece 1"]
 texture_filter = 1
-position = Vector2(1.9731193e-07, 4.9327983e-08)
-scale = Vector2(2.5572414, 2.5572414)
+position = Vector2(-7.1054274e-15, -1.7763568e-15)
+scale = Vector2(1.545, 1.545)
 texture = ExtResource("3_0hkk6")
