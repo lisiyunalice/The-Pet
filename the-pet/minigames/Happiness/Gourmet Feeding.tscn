@@ -1,19 +1,32 @@
-[gd_scene load_steps=20 format=3 uid="uid://b4fd7y6b0v4w1"]
+[gd_scene load_steps=31 format=3 uid="uid://b4fd7y6b0v4w1"]
 
-[ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Gourmet Feeding/GourmetFeeding.gd" id="1_yt2j1"]
-[ext_resource type="Texture2D" uid="uid://dils8clmrq8w4" path="res://minigames/Gourmet Feeding/background/Grass.png" id="12_o0686"]
-[ext_resource type="Texture2D" uid="uid://n6wdpgea5rj6" path="res://minigames/Gourmet Feeding/balls/item310.png" id="13_67evo"]
-[ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Gourmet Feeding/balls/item311.png" id="14_js0av"]
-[ext_resource type="Texture2D" uid="uid://drkcio5s22db4" path="res://minigames/Gourmet Feeding/balls/item312.png" id="15_6fley"]
-[ext_resource type="Texture2D" uid="uid://cjpgtholip6y2" path="res://minigames/Gourmet Feeding/balls/item313.png" id="16_triqx"]
-[ext_resource type="Texture2D" uid="uid://cvumvsen78n8u" path="res://minigames/Gourmet Feeding/balls/item314.png" id="17_qfn5j"]
-[ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Gourmet Feeding/balls/item315.png" id="18_nchp8"]
-[ext_resource type="Texture2D" uid="uid://brpnw77atsacd" path="res://minigames/Gourmet Feeding/balls/item316.png" id="19_wq1fx"]
-[ext_resource type="Texture2D" uid="uid://dm3ytvirtxrhh" path="res://minigames/Gourmet Feeding/balls/item317.png" id="20_hw8eu"]
-[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Gourmet Feeding/balls/item318.png" id="21_m61j1"]
-[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Gourmet Feeding/balls/item319.png" id="22_7pcvp"]
-[ext_resource type="Texture2D" uid="uid://cdljfrkp5lbvl" path="res://minigames/Gourmet Feeding/background/Tilled_Dirt_Wide_v2.png" id="23_ijsrh"]
-[ext_resource type="Texture2D" uid="uid://bli0d6d5rdfqh" path="res://minigames/Gourmet Feeding/background/Fences.png" id="24_67evo"]
+[ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Happiness/GourmetFeeding.gd" id="1_yt2j1"]
+[ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Happiness/1.tscn" id="2_lx6kf"]
+[ext_resource type="PackedScene" uid="uid://bbuwngudi4dui" path="res://minigames/Happiness/2.tscn" id="3_eukyl"]
+[ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Happiness/3.tscn" id="4_v3clb"]
+[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Happiness/4.tscn" id="5_sfqxu"]
+[ext_resource type="PackedScene" uid="uid://ypu38ami7e0i" path="res://minigames/Happiness/5.tscn" id="6_8uy77"]
+[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Happiness/6.tscn" id="7_f1etg"]
+[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Happiness/7.tscn" id="8_7sqgi"]
+[ext_resource type="PackedScene" uid="uid://kk4ol0ht86h4" path="res://minigames/Happiness/8.tscn" id="9_q05bv"]
+[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Happiness/9.tscn" id="10_f2muy"]
+[ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Happiness/10.tscn" id="11_2083m"]
+[ext_resource type="Texture2D" uid="uid://dils8clmrq8w4" path="res://minigames/Happiness/background/Grass.png" id="12_o0686"]
+[ext_resource type="Texture2D" uid="uid://n6wdpgea5rj6" path="res://minigames/Happiness/balls/item310.png" id="13_67evo"]
+[ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Happiness/balls/item311.png" id="14_js0av"]
+[ext_resource type="Texture2D" uid="uid://drkcio5s22db4" path="res://minigames/Happiness/balls/item312.png" id="15_6fley"]
+[ext_resource type="Texture2D" uid="uid://cjpgtholip6y2" path="res://minigames/Happiness/balls/item313.png" id="16_triqx"]
+[ext_resource type="Texture2D" uid="uid://cvumvsen78n8u" path="res://minigames/Happiness/balls/item314.png" id="17_qfn5j"]
+[ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Happiness/balls/item315.png" id="18_nchp8"]
+[ext_resource type="Texture2D" uid="uid://brpnw77atsacd" path="res://minigames/Happiness/balls/item316.png" id="19_wq1fx"]
+[ext_resource type="Texture2D" uid="uid://dm3ytvirtxrhh" path="res://minigames/Happiness/balls/item317.png" id="20_hw8eu"]
+[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Happiness/balls/item318.png" id="21_m61j1"]
+[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Happiness/balls/item319.png" id="22_7pcvp"]
+[ext_resource type="Texture2D" uid="uid://cdljfrkp5lbvl" path="res://minigames/Happiness/background/Tilled_Dirt_Wide_v2.png" id="23_ijsrh"]
+[ext_resource type="Texture2D" uid="uid://bli0d6d5rdfqh" path="res://minigames/Happiness/background/Fences.png" id="24_67evo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lx6kf"]
+size = Vector2(1188, 49.5)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fkfoo"]
 a = Vector2(0, 494)
@@ -34,6 +47,25 @@ font_size = 30
 
 [node name="GourmetFeeding" type="Node2D"]
 script = ExtResource("1_yt2j1")
+treat_level_1_scene = ExtResource("2_lx6kf")
+treat_level_2_scene = ExtResource("3_eukyl")
+treat_level_3_scene = ExtResource("4_v3clb")
+treat_level_4_scene = ExtResource("5_sfqxu")
+treat_level_5_scene = ExtResource("6_8uy77")
+treat_level_6_scene = ExtResource("7_f1etg")
+treat_level_7_scene = ExtResource("8_7sqgi")
+treat_level_8_scene = ExtResource("9_q05bv")
+treat_level_9_scene = ExtResource("10_f2muy")
+treat_level_10_scene = ExtResource("11_2083m")
+
+[node name="EndGameArea" type="Area2D" parent="."]
+position = Vector2(571, 599)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGameArea"]
+position = Vector2(5, 56.75)
+shape = SubResource("RectangleShape2D_lx6kf")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Bowl" type="StaticBody2D" parent="."]
 
@@ -245,6 +277,7 @@ text = "Score: 0"
 label_settings = SubResource("LabelSettings_67evo")
 
 [node name="GameOverLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 visible = false
 
 [node name="overlay" type="ColorRect" parent="GameOverLayer"]
@@ -283,7 +316,8 @@ label_settings = SubResource("LabelSettings_6fley")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="retry button" type="Button" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+[node name="RetryButton" type="Button" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 action_mode = 0
 text = "Retry?"
@@ -305,4 +339,6 @@ label_settings = SubResource("LabelSettings_triqx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="body_entered" from="EndGameArea" to="." method="_on_end_game_area_body_entered"]
 [connection signal="timeout" from="DropCooldownTimer" to="." method="_on_drop_cooldown_timer_timeout"]
+[connection signal="pressed" from="GameOverLayer/CenterContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

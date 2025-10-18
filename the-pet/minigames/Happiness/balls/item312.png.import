@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drkcio5s22db4"
-path="res://.godot/imported/item312.png-7b15b5c6fc0bd60016dc4ad9565bc55c.ctex"
+path="res://.godot/imported/item312.png-349d5fc4a10aeb1851083e3c46f48537.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Gourmet Feeding/balls/item312.png"
-dest_files=["res://.godot/imported/item312.png-7b15b5c6fc0bd60016dc4ad9565bc55c.ctex"]
+source_file="res://minigames/Happiness/balls/item312.png"
+dest_files=["res://.godot/imported/item312.png-349d5fc4a10aeb1851083e3c46f48537.ctex"]
 
 [params]
 

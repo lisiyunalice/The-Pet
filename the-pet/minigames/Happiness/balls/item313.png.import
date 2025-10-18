@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdljfrkp5lbvl"
-path="res://.godot/imported/Tilled_Dirt_Wide_v2.png-5063d576d409f7aef187f38dc951f3ae.ctex"
+uid="uid://cjpgtholip6y2"
+path="res://.godot/imported/item313.png-0441e42917db00bf8375ba5a914a4f80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Gourmet Feeding/background/Tilled_Dirt_Wide_v2.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_Wide_v2.png-5063d576d409f7aef187f38dc951f3ae.ctex"]
+source_file="res://minigames/Happiness/balls/item313.png"
+dest_files=["res://.godot/imported/item313.png-0441e42917db00bf8375ba5a914a4f80.ctex"]
 
 [params]
 

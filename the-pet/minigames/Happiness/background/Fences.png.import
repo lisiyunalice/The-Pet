@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c75aorrs4jr1c"
-path="res://.godot/imported/item_220.png-6b8c3057fe734e1faa7e565add074260.ctex"
+uid="uid://bli0d6d5rdfqh"
+path="res://.godot/imported/Fences.png-f2b92646ce1fde7dc766bb84e4d7d15c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Gourmet Feeding/balls color/item_220.png"
-dest_files=["res://.godot/imported/item_220.png-6b8c3057fe734e1faa7e565add074260.ctex"]
+source_file="res://minigames/Happiness/background/Fences.png"
+dest_files=["res://.godot/imported/Fences.png-f2b92646ce1fde7dc766bb84e4d7d15c.ctex"]
 
 [params]
 
