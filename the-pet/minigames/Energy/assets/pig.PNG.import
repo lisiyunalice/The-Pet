@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djspunysteqy3"
-path="res://.godot/imported/pig.PNG-381f593efcaf5051f73edd3a5e715392.ctex"
+path="res://.godot/imported/pig.PNG-8a4b9ab8ddfe148f40dc5ad6685a27a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pig.PNG"
-dest_files=["res://.godot/imported/pig.PNG-381f593efcaf5051f73edd3a5e715392.ctex"]
+source_file="res://minigames/Energy/assets/pig.PNG"
+dest_files=["res://.godot/imported/pig.PNG-8a4b9ab8ddfe148f40dc5ad6685a27a9.ctex"]
 
 [params]
 
