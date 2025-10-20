@@ -48,10 +48,11 @@ func _process(delta: float) -> void:
 			PetAlive = true
 			print("Your pet has rivived.")
 			timer.start()
-	
 
 func _on_texture_button_button_down() -> void:
-	print("Hi")
+	print("Switched to mini game.")
 	# get_tree().change_scene_to_file("res://LoremIpsum.tscn")
 	get_tree().change_scene_to_packed(minigame)
 	pass # Replace with function body.
+	
+# detect if the mini games were finished successfully then add 35 for the value

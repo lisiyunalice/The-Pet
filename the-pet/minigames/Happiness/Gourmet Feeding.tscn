@@ -65,14 +65,14 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndGameArea"]
 position = Vector2(5, 56.75)
 shape = SubResource("RectangleShape2D_lx6kf")
-debug_color = Color(0, 0.6, 0.69803923, 1)
+debug_color = Color(0, 0.6, 0.698039, 1)
 
 [node name="Bowl" type="StaticBody2D" parent="."]
 
 [node name="Grass" type="Sprite2D" parent="Bowl"]
 texture_filter = 1
 position = Vector2(576, 324)
-scale = Vector2(11.999999, 20.25)
+scale = Vector2(12, 20.25)
 texture = ExtResource("12_o0686")
 region_enabled = true
 region_rect = Rect2(0, 80, 96, 32)
@@ -148,7 +148,7 @@ region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom"]
-position = Vector2(31.999989, 0)
+position = Vector2(32, 0)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
@@ -172,7 +172,7 @@ region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3"]
-position = Vector2(31.999989, 0)
+position = Vector2(32, 0)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
@@ -184,7 +184,7 @@ region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3/Fencesbottom2/Fencesbottom"]
-position = Vector2(10.666666, 0)
+position = Vector2(10.6667, 0)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(21, 33, 6, 11)
@@ -197,7 +197,7 @@ region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences2" type="Sprite2D" parent="Bowl/Fences"]
-position = Vector2(-1.9073486e-06, 32.000004)
+position = Vector2(-1.90735e-06, 32)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
@@ -215,19 +215,19 @@ region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences" type="Sprite2D" parent="Bowl/Fences"]
-position = Vector2(0, 63.999996)
+position = Vector2(0, 64)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences5" type="Sprite2D" parent="Bowl/Fences"]
-position = Vector2(128.33333, 1.2715659e-06)
+position = Vector2(128.333, 1.27157e-06)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences2" type="Sprite2D" parent="Bowl/Fences/Fences5"]
-position = Vector2(-1.9073486e-06, 32.000004)
+position = Vector2(-1.90735e-06, 32)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
@@ -245,14 +245,14 @@ region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences" type="Sprite2D" parent="Bowl/Fences/Fences5"]
-position = Vector2(0, 63.999996)
+position = Vector2(0, 64)
 texture = ExtResource("24_67evo")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="bottom" type="CollisionShape2D" parent="Bowl"]
-position = Vector2(775.00006, 569.0002)
-rotation = 1.5707964
+position = Vector2(775, 569)
+rotation = 1.5708
 scale = Vector2(0.81, 0.81)
 shape = SubResource("SegmentShape2D_fkfoo")
 
@@ -283,7 +283,7 @@ visible = false
 [node name="overlay" type="ColorRect" parent="GameOverLayer"]
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.011764706, 0.011764706, 0.011764706, 0.7058824)
+color = Color(0.0117647, 0.0117647, 0.0117647, 0.705882)
 
 [node name="CenterContainer" type="CenterContainer" parent="GameOverLayer"]
 anchors_preset = 8

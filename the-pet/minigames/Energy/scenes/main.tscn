@@ -12,8 +12,8 @@ script = ExtResource("1_5g6v2")
 pipe_scene = ExtResource("2_h58j0")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-401.00003, -162)
-scale = Vector2(1.2607061, 1.2607062)
+position = Vector2(-401, -162)
+scale = Vector2(1.26071, 1.26071)
 texture = ExtResource("3_tefeu")
 offset = Vector2(432, 384)
 
