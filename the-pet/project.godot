@@ -15,6 +15,10 @@ run/main_scene="uid://bgn7ubge5vtyr"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://0qrpkeg50u0s"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_accept={
