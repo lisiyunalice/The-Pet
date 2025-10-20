@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://den4sx3n8oo4t"
-path="res://.godot/imported/pipe.png-d1f75b14bde36399e8b8e081ce8a470c.ctex"
+path="res://.godot/imported/pipe.png-1c54572b39b6c5fd2142618e72a146d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pipe.png"
-dest_files=["res://.godot/imported/pipe.png-d1f75b14bde36399e8b8e081ce8a470c.ctex"]
+source_file="res://minigames/Energy/assets/pipe.png"
+dest_files=["res://.godot/imported/pipe.png-1c54572b39b6c5fd2142618e72a146d3.ctex"]
 
 [params]
 

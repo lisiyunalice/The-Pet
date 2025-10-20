@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://533ubvnyvpxe"
-path="res://.godot/imported/bird2.png-a9c593802cedb50a9374c8dc66a9b92d.ctex"
+path="res://.godot/imported/bird2.png-8d42a89c3f0f29121295c3d17361c1de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bird2.png"
-dest_files=["res://.godot/imported/bird2.png-a9c593802cedb50a9374c8dc66a9b92d.ctex"]
+source_file="res://minigames/Energy/assets/bird2.png"
+dest_files=["res://.godot/imported/bird2.png-8d42a89c3f0f29121295c3d17361c1de.ctex"]
 
 [params]
 

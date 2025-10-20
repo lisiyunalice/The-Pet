@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cum5khv3jtce1"
-path="res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"
+path="res://.godot/imported/ground.png-80f760117e9915ad0257c3797dbd967c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ground.png"
-dest_files=["res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"]
+source_file="res://minigames/Energy/assets/ground.png"
+dest_files=["res://.godot/imported/ground.png-80f760117e9915ad0257c3797dbd967c.ctex"]
 
 [params]
 
