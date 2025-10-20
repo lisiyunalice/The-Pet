@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdilalyuraeiq"]
+[gd_scene load_steps=8 format=3 uid="uid://bdilalyuraeiq"]
 
 [ext_resource type="Script" uid="uid://d4a2kx4puet1u" path="res://node_2d.gd" id="1_ux2rm"]
 [ext_resource type="Texture2D" uid="uid://beh50xsnosg5i" path="res://chicken.PNG" id="2_sgb2t"]
@@ -6,12 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://energy.png" id="3_aqyhw"]
 [ext_resource type="Texture2D" uid="uid://bupa0a8pyvmoe" path="res://food.png" id="4_18xev"]
 [ext_resource type="PackedScene" uid="uid://cpdqviashudj2" path="res://LoremIpsum.tscn" id="5_sgb2t"]
+[ext_resource type="Texture2D" uid="uid://dmcv7bkpukuh3" path="res://happiness.png" id="6_aqyhw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ux2rm")
 
 [node name="Chicken" type="Sprite2D" parent="."]
-position = Vector2(439, 278)
+position = Vector2(477, 350)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sgb2t")
 
@@ -22,8 +23,9 @@ minigame = ExtResource("5_sgb2t")
 [node name="Meter2" parent="." instance=ExtResource("3_0afw7")]
 offset_top = 70.0
 offset_bottom = 4237.0
-icon = ExtResource("3_aqyhw")
+icon = ExtResource("6_aqyhw")
 
 [node name="Meter3" parent="." instance=ExtResource("3_0afw7")]
 offset_top = 119.0
 offset_bottom = 4286.0
+icon = ExtResource("3_aqyhw")
