@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://5c2kau575itl"]
-
-[ext_resource type="Script" uid="uid://bke0aytm422vi" path="res://minigames/maze/maze.gd" id="1_uolbg"]
-
-[node name="Maze" type="Node2D"]
-script = ExtResource("1_uolbg")
