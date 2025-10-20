@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		if A > 80:
 			PetAlive = true
 			print("Your pet has rivived.")
-			$timer.start() #Not sure why the countdown would not restart
+			timer.start()
 	
 
 func _on_texture_button_button_down() -> void:
