@@ -1,6 +1,7 @@
 extends HBoxContainer
 @export var icon : Texture2D
 @export var minigame: PackedScene
+var PetAlive = true
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
@@ -20,7 +21,7 @@ func _ready():
 	
 	# 创建计时器
 	timer = Timer.new()
-	timer.wait_time = 5.0  # 每 30 秒触发一次
+	timer.wait_time = 0.1  # 每 n 秒触发一次
 	timer.one_shot = false  # 不只执行一次，循环触发
 	timer.autostart = true  # 自动启动
 	add_child(timer)
@@ -34,9 +35,20 @@ func _on_timer_timeout():
 		progress_bar.value = A
 		print("A 变量减少，当前值为: ", A)
 	else:
-		print("A 已经降到 0，不再减少。")
+		print("A 已经降到 0，不再减少。", "Your pet is dead.")
 		timer.stop()
-
+		PetAlive = false
+		
+func _process(delta: float) -> void:
+	if not PetAlive :
+		A += 1
+		print("Processing, PetAlive:", PetAlive)
+		$ProgressBar.value = A
+		if A > 80:
+			PetAlive = true
+			print("Your pet has rivived.")
+			$timer.start() #Not sure why the countdown would not restart
+	
 
 func _on_texture_button_button_down() -> void:
 	print("Hi")
