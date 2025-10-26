@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://snrvq7jkapgf"]
 
-[ext_resource type="Script" uid="uid://dvtg5enwax6rg" path="res://scenes/game_over.gd" id="1_36epf"]
-[ext_resource type="Texture2D" uid="uid://c57fej47adq38" path="res://assets/restart.png" id="2_e5ng7"]
+[ext_resource type="Script" uid="uid://dvtg5enwax6rg" path="res://minigames/Energy/scenes/game_over.gd" id="1_36epf"]
+[ext_resource type="Texture2D" uid="uid://c57fej47adq38" path="res://minigames/Energy/assets/restart.png" id="2_e5ng7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5q2wo"]
 texture = ExtResource("2_e5ng7")

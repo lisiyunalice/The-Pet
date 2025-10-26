@@ -17,7 +17,16 @@ const PIPE_RANGE : int = 200
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	
+	# 给退出按钮绑定信号（假设按钮路径是 $ExitButton）
+	if $ExitButton:
+		$ExitButton.pressed.connect(func(): _on_exit_pressed())
+		
 	new_game()
+	
+func _on_exit_pressed():
+	get_tree().change_scene_to_file("res://MainMenu.tscn")
+#要改要改要改，主界面的scene我不知道在哪连着在
 
 func new_game():
 	#reset variables
@@ -27,6 +36,7 @@ func new_game():
 	scroll = 0
 	$ScoreLabel.text = "Energy: " + str(score)
 	$GameOver.hide()
+	$ResultLabel.hide()  # 新增：隐藏结果提示（成功/失败）
 	get_tree().call_group("pipes", "queue_free")
 	pipes.clear()
 	#generate starting pipes
@@ -92,6 +102,13 @@ func stop_game():
 	$Pet.flying = false
 	game_running = false
 	game_over = true
+	
+	#胜负判定
+	if score >= 100:
+		$ResultLabel.text = "Success! Energy Full🌟"
+	else:
+		$ResultLabel.text = "Failed 💔 Still Tired..."
+	$ResultLabel.show()
 	
 func bird_hit():
 	$Pet.falling = true

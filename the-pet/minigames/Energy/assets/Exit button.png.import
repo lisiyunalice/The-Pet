@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cum5khv3jtce1"
-path="res://.godot/imported/ground.png-80f760117e9915ad0257c3797dbd967c.ctex"
+uid="uid://02arfat8h7s6"
+path="res://.godot/imported/Exit button.png-189fcf2b808f0ee4a450844bd0e727e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Energy/assets/ground.png"
-dest_files=["res://.godot/imported/ground.png-80f760117e9915ad0257c3797dbd967c.ctex"]
+source_file="res://minigames/Energy/assets/Exit button.png"
+dest_files=["res://.godot/imported/Exit button.png-189fcf2b808f0ee4a450844bd0e727e5.ctex"]
 
 [params]
 
