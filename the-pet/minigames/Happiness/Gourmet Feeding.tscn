@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b4fd7y6b0v4w1"]
+[gd_scene load_steps=32 format=3 uid="uid://b4fd7y6b0v4w1"]
 
 [ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Happiness/GourmetFeeding.gd" id="1_yt2j1"]
 [ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Happiness/1.tscn" id="2_lx6kf"]
@@ -45,6 +45,9 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_triqx"]
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_lx6kf"]
+font_size = 40
+
 [node name="GourmetFeeding" type="Node2D"]
 script = ExtResource("1_yt2j1")
 treat_level_1_scene = ExtResource("2_lx6kf")
@@ -63,7 +66,7 @@ position = Vector2(571, 599)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndGameArea"]
-position = Vector2(5, 56.75)
+position = Vector2(5, 39)
 shape = SubResource("RectangleShape2D_lx6kf")
 debug_color = Color(0, 0.6, 0.698039, 1)
 
@@ -78,52 +81,52 @@ region_enabled = true
 region_rect = Rect2(0, 80, 96, 32)
 
 [node name="Item310" type="Sprite2D" parent="Bowl"]
-position = Vector2(968, 56)
+position = Vector2(941, 58)
 scale = Vector2(4, 4)
 texture = ExtResource("13_67evo")
 
 [node name="Item311" type="Sprite2D" parent="Bowl"]
-position = Vector2(1018, 106)
+position = Vector2(991, 108)
 scale = Vector2(4, 4)
 texture = ExtResource("14_js0av")
 
 [node name="Item312" type="Sprite2D" parent="Bowl"]
-position = Vector2(968, 176)
+position = Vector2(941, 178)
 scale = Vector2(4, 4)
 texture = ExtResource("15_6fley")
 
 [node name="Item313" type="Sprite2D" parent="Bowl"]
-position = Vector2(1018, 226)
+position = Vector2(991, 228)
 scale = Vector2(4, 4)
 texture = ExtResource("16_triqx")
 
 [node name="Item314" type="Sprite2D" parent="Bowl"]
-position = Vector2(968, 296)
+position = Vector2(941, 298)
 scale = Vector2(4, 4)
 texture = ExtResource("17_qfn5j")
 
 [node name="Item315" type="Sprite2D" parent="Bowl"]
-position = Vector2(1018, 346)
+position = Vector2(991, 348)
 scale = Vector2(4, 4)
 texture = ExtResource("18_nchp8")
 
 [node name="Item316" type="Sprite2D" parent="Bowl"]
-position = Vector2(968, 416)
+position = Vector2(941, 418)
 scale = Vector2(4, 4)
 texture = ExtResource("19_wq1fx")
 
 [node name="Item317" type="Sprite2D" parent="Bowl"]
-position = Vector2(1018, 466)
+position = Vector2(991, 468)
 scale = Vector2(4, 4)
 texture = ExtResource("20_hw8eu")
 
 [node name="Item318" type="Sprite2D" parent="Bowl"]
-position = Vector2(968, 536)
+position = Vector2(941, 538)
 scale = Vector2(4, 4)
 texture = ExtResource("21_m61j1")
 
 [node name="Item319" type="Sprite2D" parent="Bowl"]
-position = Vector2(1018, 586)
+position = Vector2(991, 588)
 scale = Vector2(4, 4)
 texture = ExtResource("22_7pcvp")
 
@@ -286,17 +289,16 @@ offset_bottom = 648.0
 color = Color(0.0117647, 0.0117647, 0.0117647, 0.705882)
 
 [node name="CenterContainer" type="CenterContainer" parent="GameOverLayer"]
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -244.0
-offset_top = -324.0
 offset_right = 244.0
-offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameOverLayer/CenterContainer"]
 layout_mode = 2
@@ -324,21 +326,43 @@ text = "Retry?"
 icon_alignment = 1
 vertical_icon_alignment = 2
 
+[node name="QuitButton" type="Button" parent="GameOverLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Quit
+
+"
+
 [node name="NextTreatPreview" type="Sprite2D" parent="."]
-position = Vector2(176, 416)
+position = Vector2(174, 369)
 scale = Vector2(9, 9)
 texture = ExtResource("13_67evo")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 104.0
-offset_top = 280.0
-offset_right = 256.0
-offset_bottom = 322.0
+offset_left = 102.0
+offset_top = 233.0
+offset_right = 254.0
+offset_bottom = 275.0
 text = "Next Ingot"
 label_settings = SubResource("LabelSettings_triqx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DropCountLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.637
+anchor_top = -0.068
+anchor_right = -0.637
+anchor_bottom = -0.068
+offset_left = 52.0
+offset_top = 105.0
+offset_right = 338.0
+offset_bottom = 169.0
+label_settings = SubResource("LabelSettings_lx6kf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="body_entered" from="EndGameArea" to="." method="_on_end_game_area_body_entered"]
 [connection signal="timeout" from="DropCooldownTimer" to="." method="_on_drop_cooldown_timer_timeout"]
 [connection signal="pressed" from="GameOverLayer/CenterContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOverLayer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
