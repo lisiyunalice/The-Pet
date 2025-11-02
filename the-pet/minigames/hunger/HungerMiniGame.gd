@@ -61,3 +61,8 @@ func _on_countdown_timer_timeout() -> void:
 	game_active = false
 	label.text = "Time's up!"
 	start_button.disabled = false
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://mainscene1102.tscn")
+	pass # Replace with function body.
