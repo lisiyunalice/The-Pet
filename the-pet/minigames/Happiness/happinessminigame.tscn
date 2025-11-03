@@ -1,29 +1,29 @@
 [gd_scene load_steps=32 format=3 uid="uid://b4fd7y6b0v4w1"]
 
-[ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Happiness/GourmetFeeding.gd" id="1_yt2j1"]
-[ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Happiness/1.tscn" id="2_lx6kf"]
-[ext_resource type="PackedScene" uid="uid://bbuwngudi4dui" path="res://minigames/Happiness/2.tscn" id="3_eukyl"]
-[ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Happiness/3.tscn" id="4_v3clb"]
-[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Happiness/4.tscn" id="5_sfqxu"]
-[ext_resource type="PackedScene" uid="uid://ypu38ami7e0i" path="res://minigames/Happiness/5.tscn" id="6_8uy77"]
-[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Happiness/6.tscn" id="7_f1etg"]
-[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Happiness/7.tscn" id="8_7sqgi"]
-[ext_resource type="PackedScene" uid="uid://kk4ol0ht86h4" path="res://minigames/Happiness/8.tscn" id="9_q05bv"]
-[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Happiness/9.tscn" id="10_f2muy"]
-[ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Happiness/10.tscn" id="11_2083m"]
-[ext_resource type="Texture2D" uid="uid://dils8clmrq8w4" path="res://minigames/Happiness/background/Grass.png" id="12_o0686"]
-[ext_resource type="Texture2D" uid="uid://n6wdpgea5rj6" path="res://minigames/Happiness/balls/item310.png" id="13_67evo"]
-[ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Happiness/balls/item311.png" id="14_js0av"]
-[ext_resource type="Texture2D" uid="uid://drkcio5s22db4" path="res://minigames/Happiness/balls/item312.png" id="15_6fley"]
-[ext_resource type="Texture2D" uid="uid://cjpgtholip6y2" path="res://minigames/Happiness/balls/item313.png" id="16_triqx"]
-[ext_resource type="Texture2D" uid="uid://cvumvsen78n8u" path="res://minigames/Happiness/balls/item314.png" id="17_qfn5j"]
-[ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Happiness/balls/item315.png" id="18_nchp8"]
-[ext_resource type="Texture2D" uid="uid://brpnw77atsacd" path="res://minigames/Happiness/balls/item316.png" id="19_wq1fx"]
-[ext_resource type="Texture2D" uid="uid://dm3ytvirtxrhh" path="res://minigames/Happiness/balls/item317.png" id="20_hw8eu"]
-[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Happiness/balls/item318.png" id="21_m61j1"]
-[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Happiness/balls/item319.png" id="22_7pcvp"]
-[ext_resource type="Texture2D" uid="uid://cdljfrkp5lbvl" path="res://minigames/Happiness/background/Tilled_Dirt_Wide_v2.png" id="23_ijsrh"]
-[ext_resource type="Texture2D" uid="uid://bli0d6d5rdfqh" path="res://minigames/Happiness/background/Fences.png" id="24_67evo"]
+[ext_resource type="Script" uid="uid://b7fykj7khjmd3" path="res://minigames/Happiness/happinessminigame.gd" id="1_ytccc"]
+[ext_resource type="PackedScene" uid="uid://1tqss8kjpx2v" path="res://minigames/Happiness/1.tscn" id="2_h7rhe"]
+[ext_resource type="PackedScene" uid="uid://bbuwngudi4dui" path="res://minigames/Happiness/2.tscn" id="3_osyu1"]
+[ext_resource type="PackedScene" uid="uid://d07qhkuljiahi" path="res://minigames/Happiness/3.tscn" id="4_ophug"]
+[ext_resource type="PackedScene" uid="uid://cx3ofk08uqdq4" path="res://minigames/Happiness/4.tscn" id="5_aacdr"]
+[ext_resource type="PackedScene" uid="uid://ypu38ami7e0i" path="res://minigames/Happiness/5.tscn" id="6_0m8a8"]
+[ext_resource type="PackedScene" uid="uid://dmo0nfkqo3o7a" path="res://minigames/Happiness/6.tscn" id="7_6drpj"]
+[ext_resource type="PackedScene" uid="uid://bqol86rcr7mpu" path="res://minigames/Happiness/7.tscn" id="8_s5bly"]
+[ext_resource type="PackedScene" uid="uid://kk4ol0ht86h4" path="res://minigames/Happiness/8.tscn" id="9_62072"]
+[ext_resource type="PackedScene" uid="uid://bmyngxvokgwai" path="res://minigames/Happiness/9.tscn" id="10_gf025"]
+[ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Happiness/10.tscn" id="11_c67xt"]
+[ext_resource type="Texture2D" uid="uid://dils8clmrq8w4" path="res://minigames/Happiness/background/Grass.png" id="12_r8mql"]
+[ext_resource type="Texture2D" uid="uid://n6wdpgea5rj6" path="res://minigames/Happiness/balls/item310.png" id="13_8fiy4"]
+[ext_resource type="Texture2D" uid="uid://d2fkd4iu3i3hs" path="res://minigames/Happiness/balls/item311.png" id="14_s18rf"]
+[ext_resource type="Texture2D" uid="uid://drkcio5s22db4" path="res://minigames/Happiness/balls/item312.png" id="15_yastq"]
+[ext_resource type="Texture2D" uid="uid://cjpgtholip6y2" path="res://minigames/Happiness/balls/item313.png" id="16_hsjix"]
+[ext_resource type="Texture2D" uid="uid://cvumvsen78n8u" path="res://minigames/Happiness/balls/item314.png" id="17_4he6j"]
+[ext_resource type="Texture2D" uid="uid://dgqi4gy6g64oc" path="res://minigames/Happiness/balls/item315.png" id="18_sl0jv"]
+[ext_resource type="Texture2D" uid="uid://brpnw77atsacd" path="res://minigames/Happiness/balls/item316.png" id="19_co5qn"]
+[ext_resource type="Texture2D" uid="uid://dm3ytvirtxrhh" path="res://minigames/Happiness/balls/item317.png" id="20_httb2"]
+[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Happiness/balls/item318.png" id="21_21hin"]
+[ext_resource type="Texture2D" uid="uid://b3emhkktxw6st" path="res://minigames/Happiness/balls/item319.png" id="22_bfoem"]
+[ext_resource type="Texture2D" uid="uid://cdljfrkp5lbvl" path="res://minigames/Happiness/background/Tilled_Dirt_Wide_v2.png" id="23_vgg8r"]
+[ext_resource type="Texture2D" uid="uid://bli0d6d5rdfqh" path="res://minigames/Happiness/background/Fences.png" id="24_ify0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lx6kf"]
 size = Vector2(1188, 49.5)
@@ -49,17 +49,17 @@ font_size = 30
 font_size = 40
 
 [node name="GourmetFeeding" type="Node2D"]
-script = ExtResource("1_yt2j1")
-treat_level_1_scene = ExtResource("2_lx6kf")
-treat_level_2_scene = ExtResource("3_eukyl")
-treat_level_3_scene = ExtResource("4_v3clb")
-treat_level_4_scene = ExtResource("5_sfqxu")
-treat_level_5_scene = ExtResource("6_8uy77")
-treat_level_6_scene = ExtResource("7_f1etg")
-treat_level_7_scene = ExtResource("8_7sqgi")
-treat_level_8_scene = ExtResource("9_q05bv")
-treat_level_9_scene = ExtResource("10_f2muy")
-treat_level_10_scene = ExtResource("11_2083m")
+script = ExtResource("1_ytccc")
+treat_level_1_scene = ExtResource("2_h7rhe")
+treat_level_2_scene = ExtResource("3_osyu1")
+treat_level_3_scene = ExtResource("4_ophug")
+treat_level_4_scene = ExtResource("5_aacdr")
+treat_level_5_scene = ExtResource("6_0m8a8")
+treat_level_6_scene = ExtResource("7_6drpj")
+treat_level_7_scene = ExtResource("8_s5bly")
+treat_level_8_scene = ExtResource("9_62072")
+treat_level_9_scene = ExtResource("10_gf025")
+treat_level_10_scene = ExtResource("11_c67xt")
 
 [node name="EndGameArea" type="Area2D" parent="."]
 position = Vector2(571, 599)
@@ -76,180 +76,180 @@ debug_color = Color(0, 0.6, 0.698039, 1)
 texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(12, 20.25)
-texture = ExtResource("12_o0686")
+texture = ExtResource("12_r8mql")
 region_enabled = true
 region_rect = Rect2(0, 80, 96, 32)
 
 [node name="Item310" type="Sprite2D" parent="Bowl"]
 position = Vector2(941, 58)
 scale = Vector2(4, 4)
-texture = ExtResource("13_67evo")
+texture = ExtResource("13_8fiy4")
 
 [node name="Item311" type="Sprite2D" parent="Bowl"]
 position = Vector2(991, 108)
 scale = Vector2(4, 4)
-texture = ExtResource("14_js0av")
+texture = ExtResource("14_s18rf")
 
 [node name="Item312" type="Sprite2D" parent="Bowl"]
 position = Vector2(941, 178)
 scale = Vector2(4, 4)
-texture = ExtResource("15_6fley")
+texture = ExtResource("15_yastq")
 
 [node name="Item313" type="Sprite2D" parent="Bowl"]
 position = Vector2(991, 228)
 scale = Vector2(4, 4)
-texture = ExtResource("16_triqx")
+texture = ExtResource("16_hsjix")
 
 [node name="Item314" type="Sprite2D" parent="Bowl"]
 position = Vector2(941, 298)
 scale = Vector2(4, 4)
-texture = ExtResource("17_qfn5j")
+texture = ExtResource("17_4he6j")
 
 [node name="Item315" type="Sprite2D" parent="Bowl"]
 position = Vector2(991, 348)
 scale = Vector2(4, 4)
-texture = ExtResource("18_nchp8")
+texture = ExtResource("18_sl0jv")
 
 [node name="Item316" type="Sprite2D" parent="Bowl"]
 position = Vector2(941, 418)
 scale = Vector2(4, 4)
-texture = ExtResource("19_wq1fx")
+texture = ExtResource("19_co5qn")
 
 [node name="Item317" type="Sprite2D" parent="Bowl"]
 position = Vector2(991, 468)
 scale = Vector2(4, 4)
-texture = ExtResource("20_hw8eu")
+texture = ExtResource("20_httb2")
 
 [node name="Item318" type="Sprite2D" parent="Bowl"]
 position = Vector2(941, 538)
 scale = Vector2(4, 4)
-texture = ExtResource("21_m61j1")
+texture = ExtResource("21_21hin")
 
 [node name="Item319" type="Sprite2D" parent="Bowl"]
 position = Vector2(991, 588)
 scale = Vector2(4, 4)
-texture = ExtResource("22_7pcvp")
+texture = ExtResource("22_bfoem")
 
 [node name="TilledDirtWideV2" type="Sprite2D" parent="Bowl"]
 position = Vector2(576, 320)
 scale = Vector2(14, 15.5)
-texture = ExtResource("23_ijsrh")
+texture = ExtResource("23_vgg8r")
 region_enabled = true
 region_rect = Rect2(128, 80, 32, 32)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl"]
 position = Vector2(400, 568)
 scale = Vector2(3, 3)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom"]
 position = Vector2(16, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom"]
 position = Vector2(32, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom2"]
 position = Vector2(16, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom3" type="Sprite2D" parent="Bowl/Fencesbottom"]
 position = Vector2(64, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3"]
 position = Vector2(16, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom2" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3"]
 position = Vector2(32, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3/Fencesbottom2"]
 position = Vector2(16, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 16, 11)
 
 [node name="Fencesbottom" type="Sprite2D" parent="Bowl/Fencesbottom/Fencesbottom3/Fencesbottom2/Fencesbottom"]
 position = Vector2(10.6667, 0)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(21, 33, 6, 11)
 
 [node name="Fences" type="Sprite2D" parent="Bowl"]
 position = Vector2(384, 120)
 scale = Vector2(3, 3)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences2" type="Sprite2D" parent="Bowl/Fences"]
 position = Vector2(-1.90735e-06, 32)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences4" type="Sprite2D" parent="Bowl/Fences"]
 position = Vector2(0, 128)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences3" type="Sprite2D" parent="Bowl/Fences"]
 position = Vector2(0, 96)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences" type="Sprite2D" parent="Bowl/Fences"]
 position = Vector2(0, 64)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences5" type="Sprite2D" parent="Bowl/Fences"]
 position = Vector2(128.333, 1.27157e-06)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences2" type="Sprite2D" parent="Bowl/Fences/Fences5"]
 position = Vector2(-1.90735e-06, 32)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences4" type="Sprite2D" parent="Bowl/Fences/Fences5"]
 position = Vector2(0, 128)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences3" type="Sprite2D" parent="Bowl/Fences/Fences5"]
 position = Vector2(0, 96)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
 [node name="Fences" type="Sprite2D" parent="Bowl/Fences/Fences5"]
 position = Vector2(0, 64)
-texture = ExtResource("24_67evo")
+texture = ExtResource("24_ify0b")
 region_enabled = true
 region_rect = Rect2(5, 1, 6, 32)
 
@@ -336,7 +336,7 @@ Quit
 [node name="NextTreatPreview" type="Sprite2D" parent="."]
 position = Vector2(174, 369)
 scale = Vector2(9, 9)
-texture = ExtResource("13_67evo")
+texture = ExtResource("13_8fiy4")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 102.0
