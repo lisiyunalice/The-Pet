@@ -14,7 +14,7 @@
 font = SubResource("FontVariation_stdtv")
 font_size = 40
 outline_size = 20
-outline_color = Color(0.901961, 0.380392, 0.113725, 1)
+outline_color = Color(0.9019608, 0.38039216, 0.11372549, 1)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5g6v2")
@@ -42,7 +42,7 @@ offset_left = 16.0
 offset_top = 19.0
 offset_right = 1849.0
 offset_bottom = 1819.0
-scale = Vector2(0.0294533, 0.0294533)
+scale = Vector2(0.029453347, 0.029453347)
 text = "Exit"
 icon = ExtResource("6_stdtv")
 

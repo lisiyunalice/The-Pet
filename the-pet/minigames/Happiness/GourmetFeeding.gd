@@ -149,8 +149,6 @@ func game_over():
 	if is_instance_valid(final_score_label):
 		final_score_label.text = "Score: " + str(score)
 	print("!!! GAME OVER !!! Score: " + str(score))
-	if score >= 100:
-		_on_game_won()
 
 
 func _on_retry_button_pressed():
@@ -163,10 +161,3 @@ func _on_quit_button_pressed() -> void:
 	get_tree().paused = false
 	await get_tree().process_frame
 	get_tree().change_scene_to_file(main_menu_scene_path)
-
-
-signal game_finished
-
-func _on_game_won():
-	Global.add_reward(35, 0, 0)
-	emit_signal("game_finished")  # 通知主场景移除自己

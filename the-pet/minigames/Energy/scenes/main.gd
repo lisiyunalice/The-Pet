@@ -26,10 +26,7 @@ func _ready():
 	
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://main scene.tscn")
-<<<<<<< HEAD
-=======
 #要改要改要改，主界面的scene我不知道在哪连着在
->>>>>>> 48553e3cacadfeae375b97555cee75b8a892a882
 
 func new_game():
 	#reset variables
@@ -128,5 +125,5 @@ func _on_game_over_restart():
 signal game_finished
 
 func _on_game_won():
-	Global.add_reward(0, 35, 0)
+	Global.add_reward(35, 0, 0)
 	emit_signal("game_finished")  # 通知主场景移除自己
