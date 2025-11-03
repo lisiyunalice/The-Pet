@@ -3,21 +3,22 @@
 [ext_resource type="Script" uid="uid://cmkdyttymnkef" path="res://minigames/hunger/HungerMiniGame.gd" id="1_xmiqa"]
 [ext_resource type="Texture2D" uid="uid://da8l1v2rk63ni" path="res://minigames/hunger/pet background.jpg" id="2_b12xw"]
 
-[node name="HungerMiniGame" type="Node2D"]
+[node name="HungerMiniGame" type="Node"]
 script = ExtResource("1_xmiqa")
 
 [node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 2.0
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 27.0
-offset_top = 122.0
-offset_right = 178.0
-offset_bottom = 171.0
+offset_left = 25.0
+offset_top = 49.0
+offset_right = 201.0
+offset_bottom = 98.0
 text = "Press Start to Begin
 "
 
 [node name="HungerBar" type="ProgressBar" parent="."]
-offset_right = 4.0
+offset_right = 255.0
 offset_bottom = 27.0
 max_value = 10.0
 
@@ -35,5 +36,13 @@ position = Vector2(577.209, 358.813)
 scale = Vector2(0.977069, 0.977069)
 texture = ExtResource("2_b12xw")
 
+[node name="Button" type="Button" parent="."]
+offset_left = 143.0
+offset_top = 412.0
+offset_right = 188.0
+offset_bottom = 443.0
+text = "back"
+
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

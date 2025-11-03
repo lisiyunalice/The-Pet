@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgn7ubge5vtyr"]
+
+[ext_resource type="Script" uid="uid://f1a7b0hf6bgf" path="res://maingame.gd" id="1_2sw64"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2sw64")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 124.0
+offset_bottom = 31.0
+text = "jump yo hunger mini game"
+
+[node name="Button2" type="Button" parent="."]
+offset_top = 52.0
+offset_right = 214.0
+offset_bottom = 83.0
+text = "jump to Happiness mini game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
