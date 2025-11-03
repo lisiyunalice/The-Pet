@@ -64,5 +64,5 @@ func _on_countdown_timer_timeout() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://mainscene1102.tscn")
+	get_tree().change_scene_to_file("res://main scene.tscn")
 	pass # Replace with function body.
