@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rnq012filf45"]
+[gd_scene load_steps=3 format=3 uid="uid://rnq012filf45"]
 
 [ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://energy.png" id="1_341p1"]
+[ext_resource type="Script" uid="uid://cthhibys1t58b" path="res://energy.gd" id="1_a4duk"]
 
 [node name="MeterEnergy" type="HBoxContainer"]
 offset_left = 370.0
@@ -8,6 +9,7 @@ offset_top = 170.0
 offset_right = 20270.0
 offset_bottom = 4337.0
 scale = Vector2(0.01, 0.01)
+script = ExtResource("1_a4duk")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 2
