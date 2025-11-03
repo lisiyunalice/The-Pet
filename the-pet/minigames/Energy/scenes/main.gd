@@ -25,8 +25,7 @@ func _ready():
 	new_game()
 	
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://MainMenu.tscn")
-#要改要改要改，主界面的scene我不知道在哪连着在
+	get_tree().change_scene_to_file("res://main scene.tscn")
 
 func new_game():
 	#reset variables
