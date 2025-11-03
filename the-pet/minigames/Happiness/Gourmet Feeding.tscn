@@ -48,7 +48,7 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_lx6kf"]
 font_size = 40
 
-[node name="GourmetFeeding" type="Node"]
+[node name="GourmetFeeding" type="Node2D"]
 script = ExtResource("1_yt2j1")
 treat_level_1_scene = ExtResource("2_lx6kf")
 treat_level_2_scene = ExtResource("3_eukyl")

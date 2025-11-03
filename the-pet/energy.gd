@@ -29,7 +29,7 @@ func _ready():
 	
 	# 创建计时器
 	timer = Timer.new()
-	timer.wait_time = 10  # 每 n 秒触发一次
+	timer.wait_time = 1  # 每 n 秒触发一次
 	timer.one_shot = false  # 不只执行一次，循环触发
 	timer.autostart = true  # 自动启动
 	add_child(timer)

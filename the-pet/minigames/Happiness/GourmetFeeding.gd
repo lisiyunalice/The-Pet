@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @export var treat_level_1_scene: PackedScene
 @export var treat_level_2_scene: PackedScene
@@ -37,11 +37,8 @@ var score: int = 0
 var can_drop: bool = true
 var remaining_drops: int = MAX_DROPS_START
 
-#var screen_size : Vector2i
 
 func _ready():
-#	screen_size = get_window().size
-	
 	add_to_group("merger")
 	treat_pool = [treat_level_1_scene, treat_level_2_scene]
 	remaining_drops = MAX_DROPS_START
@@ -152,7 +149,7 @@ func game_over():
 	if is_instance_valid(final_score_label):
 		final_score_label.text = "Score: " + str(score)
 	print("!!! GAME OVER !!! Score: " + str(score))
-	if score >= 1000:
+	if score >= 100:
 		_on_game_won()
 
 

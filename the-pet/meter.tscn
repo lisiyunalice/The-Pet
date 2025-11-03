@@ -9,8 +9,6 @@ offset_top = 170.0
 offset_right = 20270.0
 offset_bottom = 4337.0
 scale = Vector2(0.01, 0.01)
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_2qpkh")
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -26,6 +24,5 @@ theme_override_font_sizes/font_size = 64
 
 [node name="MiniGameContainer" type="Container" parent="."]
 layout_mode = 2
-size_flags_horizontal = 4
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
