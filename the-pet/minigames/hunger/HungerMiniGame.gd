@@ -61,8 +61,14 @@ func _on_countdown_timer_timeout() -> void:
 	game_active = false
 	label.text = "Time's up!"
 	start_button.disabled = false
+	if hunger >= 50:
+		_on_game_won()
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://mainscene1102.tscn")
+	get_tree().change_scene_to_file("res://main scene.tscn")
 	pass # Replace with function body.
+
+func _on_game_won():
+	Global.add_reward(0, 0, 35)
+	emit_signal("game_finished")  # 通知主场景移除自己
