@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cowo3oe3i6ga0"]
+[gd_scene load_steps=3 format=3 uid="uid://d1w8fs5rmynyq"]
 
-[ext_resource type="Texture2D" uid="uid://bupa0a8pyvmoe" path="res://food.png" id="1_1ydcf"]
-[ext_resource type="Script" uid="uid://6bm1d8wvwrfv" path="res://food.gd" id="1_2qpkh"]
+[ext_resource type="Script" uid="uid://dho4biceyg5es" path="res://happy.gd" id="1_ho4cl"]
+[ext_resource type="Texture2D" uid="uid://dmcv7bkpukuh3" path="res://happiness.png" id="2_ho4cl"]
 
-[node name="Meter" type="HBoxContainer"]
+[node name="MeterHappy" type="HBoxContainer"]
 offset_left = 370.0
 offset_top = 170.0
 offset_right = 20270.0
 offset_bottom = 4337.0
 scale = Vector2(0.01, 0.01)
-script = ExtResource("1_2qpkh")
+script = ExtResource("1_ho4cl")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 2
-texture_normal = ExtResource("1_1ydcf")
+texture_normal = ExtResource("2_ho4cl")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(100, 100)

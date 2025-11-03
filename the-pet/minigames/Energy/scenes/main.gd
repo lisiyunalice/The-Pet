@@ -25,7 +25,7 @@ func _ready():
 	new_game()
 	
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://MainMenu.tscn")
+	get_tree().change_scene_to_file("res://main scene.tscn")
 #要改要改要改，主界面的scene我不知道在哪连着在
 
 func new_game():
@@ -106,6 +106,7 @@ func stop_game():
 	#胜负判定
 	if score >= 100:
 		$ResultLabel.text = "Success! Energy Full🌟"
+		_on_game_won()
 	else:
 		$ResultLabel.text = "Failed 💔 Still Tired..."
 	$ResultLabel.show()
@@ -120,3 +121,9 @@ func _on_ground_hit():
 
 func _on_game_over_restart():
 	new_game()
+
+signal game_finished
+
+func _on_game_won():
+	Global.add_reward(35, 0, 0)
+	emit_signal("game_finished")  # 通知主场景移除自己

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="the pet"
-run/main_scene="uid://bgn7ubge5vtyr"
+run/main_scene="uid://dmau8fk0v6we0"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://0qrpkeg50u0s"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [display]
 

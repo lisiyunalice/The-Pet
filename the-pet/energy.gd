@@ -5,19 +5,17 @@ var PetAlive = true
 @onready var mini_game_container = $MiniGameContainer
 
 
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			print("clicked!")
+#func _input_event(viewport, event, shape_idx):
+#	if event is InputEventMouseButton and event.pressed:
+#		if event.button_index == MOUSE_BUTTON_LEFT:
+#			print("clicked!")
 		 #   var new_scene = load("res://scenes/NextScene.tscn")
 		  #  get_tree().change_scene_to_packed(new_scene)
 		
-var A: int = 50  # 假设初始值为 50
+#var A: int = 50  # 假设初始值为 50
 var max_A: int = 100        # 最大值，用来设置进度条上限
 var timer: Timer
 @onready var progress_bar = $ProgressBar  # 获取场景中的 ProgressBar 节点
-
-
 
 func _ready():
 	update_bars()
@@ -43,24 +41,25 @@ func _ready():
 
 func update_bars():
 	var stats = Global.player_stats
-	progress_bar.value = stats["happy"] #需要替换
+	progress_bar.value = stats["energy"] #需要替换
 	
 func _on_timer_timeout():
-	if A > 0:
-		A -= 1
-		progress_bar.value = A
-		print("A 变量减少，当前值为: ", A)
+	if Global.player_stats["energy"] > 0:
+		Global.player_stats["energy"] -= 1
+		progress_bar.value = Global.player_stats["energy"]
+		Global.emit_signal("stats_changed")
+		print("Energy 变量减少，当前值为: ", Global.player_stats["energy"])
 	else:
-		print("A 已经降到 0，不再减少。", "Your pet is dead.")
+		print("Energy 已经降到 0，不再减少。", "Your pet is dead.")
 		timer.stop()
 		PetAlive = false
 		
 func _process(delta: float) -> void:
 	if not PetAlive :
-		A += 1
+		Global.player_stats["energy"] += 0.1
 		print("Processing, PetAlive:", PetAlive)
-		$ProgressBar.value = A
-		if A > 80:
+		$ProgressBar.value = Global.player_stats["energy"]
+		if Global.player_stats["energy"] > 80:
 			PetAlive = true
 			print("Your pet has rivived.")
 			timer.start()
