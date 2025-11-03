@@ -21,4 +21,4 @@ func add_reward(happy: int = 0, energy: int = 0, food: int = 0):
 	player_stats["energy"] += energy
 	player_stats["food"] += food
 	#emit_signal("stats_changed")
-	print("奖励已添加！当前状态: ", player_stats)
+	print("Rewarded! Current Pet Status: ", player_stats)
