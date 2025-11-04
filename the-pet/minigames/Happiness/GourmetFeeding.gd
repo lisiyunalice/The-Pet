@@ -164,6 +164,7 @@ func _on_quit_button_pressed() -> void:
 	await get_tree().process_frame
 	get_tree().change_scene_to_file(main_menu_scene_path)
 	
+signal game_finished
 func _on_game_won():
 	Global.add_reward(35, 0, 0)
 	emit_signal("game_finished")  # 通知主场景移除自己

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8pnfpwjdxbeo"
-path="res://.godot/imported/energy.png-b4da8640125dd9dfe76bd735b5208999.ctex"
+path="res://.godot/imported/energy.png-0996039cbd0b061e0fd4aca986da2f61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/hunger/energy.png"
-dest_files=["res://.godot/imported/energy.png-b4da8640125dd9dfe76bd735b5208999.ctex"]
+source_file="res://energy.png"
+dest_files=["res://.godot/imported/energy.png-0996039cbd0b061e0fd4aca986da2f61.ctex"]
 
 [params]
 

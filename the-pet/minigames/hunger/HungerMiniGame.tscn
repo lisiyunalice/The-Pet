@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://swnjheonun3p"]
 
 [ext_resource type="Script" uid="uid://cmkdyttymnkef" path="res://minigames/hunger/HungerMiniGame.gd" id="1_xmiqa"]
-[ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://minigames/hunger/energy.png" id="2_28m4l"]
+[ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://energy.png" id="2_28m4l"]
 [ext_resource type="Texture2D" uid="uid://da8l1v2rk63ni" path="res://minigames/hunger/pet background.jpg" id="2_b12xw"]
 [ext_resource type="Texture2D" uid="uid://c57fej47adq38" path="res://minigames/Energy/assets/restart.png" id="3_0cw3m"]
 [ext_resource type="Texture2D" uid="uid://02arfat8h7s6" path="res://minigames/Energy/assets/Exit button.png" id="5_qipj6"]
@@ -29,13 +29,14 @@ texture = ExtResource("2_b12xw")
 
 [node name="TimeLabel" type="Label" parent="."]
 z_index = 100
-offset_left = 306.0
-offset_top = 18.0
-offset_right = 589.0
-offset_bottom = 105.0
+offset_left = 223.0
+offset_top = 1.0
+offset_right = 786.0
+offset_bottom = 133.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Press Start to Begin
+Keep hitting SPACE key to feed your chicken!
 "
 
 [node name="PetBackground2" type="Sprite2D" parent="."]
@@ -119,6 +120,7 @@ one_shot = true
 visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -126,6 +128,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -139,7 +142,7 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
-text = "gamer over"
+text = "game over"
 horizontal_alignment = 1
 vertical_alignment = 1
 

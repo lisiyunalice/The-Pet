@@ -338,12 +338,22 @@ position = Vector2(174, 369)
 scale = Vector2(9, 9)
 texture = ExtResource("13_67evo")
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 485.0
+offset_top = 22.0
+offset_right = 637.0
+offset_bottom = 64.0
+text = "↓Click Here↓"
+label_settings = SubResource("LabelSettings_triqx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="."]
 offset_left = 102.0
 offset_top = 233.0
 offset_right = 254.0
 offset_bottom = 275.0
-text = "Next Ingot"
+text = "Next"
 label_settings = SubResource("LabelSettings_triqx")
 horizontal_alignment = 1
 vertical_alignment = 1

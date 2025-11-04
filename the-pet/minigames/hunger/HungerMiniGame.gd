@@ -9,7 +9,7 @@ var hunger = 0
 var game_active = false  # 控制是否能按空格
 
 func _ready():
-	label.text = "Press Start to Begin"
+	label.text = "Press Start to Begin. Keep hitting SPACE key to feed your chicken!"
 	bar.value = 0
 
 func _on_StartButton_pressed():
@@ -27,9 +27,9 @@ func _process(delta):
 		if timer.time_left > 0:
 			label.text = str(int(ceil(timer.time_left)))
 		else:
-			label.text = "Time's up!"
-			game_active = false
-			start_button.disabled = false
+			label.text = "Time's up! All Chicken Dead! Try to be faster next time."
+			#game_active = false
+			#start_button.disabled = false
 			
 	if Input.is_action_just_pressed("space"):
 		score += 1
@@ -38,9 +38,10 @@ func _process(delta):
 
 func _on_CountdownTimer_timeout():
 	# 倒计时结束
-	game_active = false
-	label.text = "Time's up!"
-	start_button.disabled = false
+	#game_active = false
+	label.text = "Time's up! All Chicken Dead! Try to be faster next time."
+	#start_button.disabled = false
+	#emit_signal("game_finished")
 
 
 
@@ -78,7 +79,7 @@ func _on_countdown_timer_timeout() -> void:
 		$CanvasLayer.show()
 		label.text = "4"
 		score=0
-		game_active = false
+		#game_active = false
 		label.text = "Time's up!"
 		start_button.disabled = false
 
@@ -102,7 +103,7 @@ func updata():
 		
 		label.text = "4"
 		score=0
-	
+		
 		game_active = false
 		
 		start_button.disabled = false
@@ -136,3 +137,8 @@ var gametimes = 0
 
 func _on_timer_timeout() -> void:
 	pass # Replace with function body.
+
+signal game_finished
+func _on_game_won():
+	Global.add_reward(0, 0, 35)
+	emit_signal("game_finished")  # 通知主场景移除自己
