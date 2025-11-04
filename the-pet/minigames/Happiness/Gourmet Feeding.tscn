@@ -81,51 +81,61 @@ region_enabled = true
 region_rect = Rect2(0, 80, 96, 32)
 
 [node name="Item310" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(941, 58)
 scale = Vector2(4, 4)
 texture = ExtResource("13_67evo")
 
 [node name="Item311" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(991, 108)
 scale = Vector2(4, 4)
 texture = ExtResource("14_js0av")
 
 [node name="Item312" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(941, 178)
 scale = Vector2(4, 4)
 texture = ExtResource("15_6fley")
 
 [node name="Item313" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(991, 228)
 scale = Vector2(4, 4)
 texture = ExtResource("16_triqx")
 
 [node name="Item314" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(941, 298)
 scale = Vector2(4, 4)
 texture = ExtResource("17_qfn5j")
 
 [node name="Item315" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(991, 348)
 scale = Vector2(4, 4)
 texture = ExtResource("18_nchp8")
 
 [node name="Item316" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(941, 418)
 scale = Vector2(4, 4)
 texture = ExtResource("19_wq1fx")
 
 [node name="Item317" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(991, 468)
 scale = Vector2(4, 4)
 texture = ExtResource("20_hw8eu")
 
 [node name="Item318" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(941, 538)
 scale = Vector2(4, 4)
 texture = ExtResource("21_m61j1")
 
 [node name="Item319" type="Sprite2D" parent="Bowl"]
+visible = false
 position = Vector2(991, 588)
 scale = Vector2(4, 4)
 texture = ExtResource("22_7pcvp")
@@ -272,10 +282,10 @@ wait_time = 0.5
 one_shot = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 40.0
-offset_top = 32.0
-offset_right = 229.0
-offset_bottom = 101.0
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 326.0
+offset_bottom = 225.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_67evo")
 
@@ -335,15 +345,15 @@ Quit
 
 [node name="NextTreatPreview" type="Sprite2D" parent="."]
 position = Vector2(174, 369)
-scale = Vector2(9, 9)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_67evo")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 485.0
-offset_top = 22.0
-offset_right = 637.0
-offset_bottom = 64.0
-text = "↓Click Here↓"
+offset_left = 484.0
+offset_top = 584.0
+offset_right = 660.0
+offset_bottom = 626.0
+text = "↑Click Here↑"
 label_settings = SubResource("LabelSettings_triqx")
 horizontal_alignment = 1
 vertical_alignment = 1

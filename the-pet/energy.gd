@@ -48,9 +48,9 @@ func _on_timer_timeout():
 		Global.player_stats["energy"] -= 1
 		progress_bar.value = Global.player_stats["energy"]
 		Global.emit_signal("stats_changed")
-		print("Energy 变量减少，当前值为: ", Global.player_stats["energy"])
+		print("Energy: ", Global.player_stats["energy"])
 	else:
-		print("Energy 已经降到 0，不再减少。", "Your pet is dead.")
+		print("Energy 0", "Your pet is dead.")
 		timer.stop()
 		PetAlive = false
 		
