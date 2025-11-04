@@ -74,7 +74,8 @@ func _on_countdown_timer_timeout() -> void:
 		score=0
 	elif gametimes == 4:
 		$chicken4.queue_free()
-		timer.start()
+		
+		$CanvasLayer.show()
 		label.text = "4"
 		score=0
 		game_active = false
