@@ -22,7 +22,12 @@ func _on_StartButton_pressed():
 	timer.start()
 
 func _process(delta):
-	# 每帧更新倒计时文字
+	var score1 = $Node.get_children().size()*25
+	if score1 >= 50:
+		$CanvasLayer/Panel/Label2.text = "you win"
+	else:
+		$CanvasLayer/Panel/Label2.text = "you lose"
+	$CanvasLayer/Panel/Label.text = "score:" + str($Node.get_children().size()*25)
 	if game_active:
 		if timer.time_left > 0:
 			label.text = str(int(ceil(timer.time_left)))
@@ -58,23 +63,24 @@ func _on_start_button_pressed() -> void:
 func _on_countdown_timer_timeout() -> void:
 	gametimes += 1
 	if gametimes == 1:
-		$chicken1.queue_free()
+
+		%chicken1.queue_free()
 		timer.start()
 		label.text = "1"
 		score=0
 	elif gametimes == 2:
-		$chicken2.queue_free()
+		%chicken2.queue_free()
 		timer.start()
 		label.text = "2"
 		score=0
 		
 	elif gametimes == 3:
-		$chicken3.queue_free()
+		%chicken3.queue_free()
 		timer.start()
 		label.text = "3"
 		score=0
 	elif gametimes == 4:
-		$chicken4.queue_free()
+		%chicken4.queue_free()
 		
 		$CanvasLayer.show()
 		label.text = "4"
@@ -105,8 +111,9 @@ func updata():
 		score=0
 		
 		game_active = false
-		
 		start_button.disabled = false
+		$CanvasLayer.show()
+
 
 
 func _on_button_pressed() -> void:
@@ -116,7 +123,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	pass # Replace with 	get_tree().change_scene_to_file("res://mainscene1102.tscn")function body.
+	get_tree().change_scene_to_file("res://minigames/hunger/HungerMiniGame.tscn")
 
 
 var score = 0:
