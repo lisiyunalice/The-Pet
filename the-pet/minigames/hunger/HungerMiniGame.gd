@@ -7,6 +7,10 @@ extends Node
 
 var hunger = 0
 var game_active = false  # 控制是否能按空格
+var space_count := 0
+var winning := false
+var time_left := 20.0  # 倒计时秒数
+var timer_active := true  # 控制是否还能按空格
 
 func _ready():
 	label.text = "Press Start to Begin. Keep hitting SPACE key to feed your chicken!"
@@ -27,20 +31,34 @@ func _process(delta):
 		if timer.time_left > 0:
 			label.text = str(int(ceil(timer.time_left)))
 		else:
-			label.text = "Time's up! All Chicken Dead! Try to be faster next time."
+			label.text = "Time's up! Try to be faster next time."
 			#game_active = false
 			#start_button.disabled = false
-			
-	if Input.is_action_just_pressed("space"):
-		score += 1
-
-
+	if timer_active:
+		# 倒计时进行中
+		time_left -= delta
+		if time_left <= 0:
+			timer_active = false
+			print("⏰Time's up......")
+		if Input.is_action_just_pressed("space"):
+			score += 1
+			space_count += 1
+		#print("按下空格次数: ", space_count)
+		# 检查是否达到40次
+			if space_count >= 40 and not winning:
+				winning = true
+				_on_game_won()
+				
+	else:
+		# 时间结束后，按空格不会再有反应
+		if Input.is_action_just_pressed("space"):
+			print("Time's up...Try again.")
 
 func _on_CountdownTimer_timeout():
 	# 倒计时结束
-	#game_active = false
-	label.text = "Time's up! All Chicken Dead! Try to be faster next time."
-	#start_button.disabled = false
+	game_active = false
+	label.text = "Time's up! Try to be faster next time."
+	start_button.disabled = false
 	#emit_signal("game_finished")
 
 
@@ -82,6 +100,7 @@ func _on_countdown_timer_timeout() -> void:
 		#game_active = false
 		label.text = "Time's up!"
 		start_button.disabled = false
+		winning = false
 
 func updata():
 	if gametimes == 1:
@@ -137,6 +156,7 @@ var gametimes = 0
 
 func _on_timer_timeout() -> void:
 	pass # Replace with function body.
+
 
 signal game_finished
 func _on_game_won():

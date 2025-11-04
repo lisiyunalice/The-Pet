@@ -30,6 +30,8 @@ const MAX_INITIAL_LEVEL = 3
 const MAX_DROPS_START = 10
 const MERGE_BONUS_DROPS = 1
 
+var time_left := 30.0  # 倒计时秒数
+var timer_active := true  # 控制是否还能按空格
 
 var treat_pool: Array[PackedScene] = []
 var current_treat_scene: PackedScene
@@ -134,7 +136,8 @@ func add_score(amount: int):
 
 func update_score_ui():
 	if is_instance_valid(score_label):
-		score_label.text = "Score: " + str(score)
+		score_label.text = "Score: " + str(score)  + " and
+		" + str(time_left) + " seconds left to get 200!"
 
 
 func _on_end_game_area_body_entered(body: Node2D):
@@ -149,8 +152,7 @@ func game_over():
 	if is_instance_valid(final_score_label):
 		final_score_label.text = "Score: " + str(score)
 	print("!!! GAME OVER !!! Score: " + str(score))
-	if score >= 200:
-		_on_game_won()
+
 
 
 func _on_retry_button_pressed():
@@ -163,7 +165,18 @@ func _on_quit_button_pressed() -> void:
 	get_tree().paused = false
 	await get_tree().process_frame
 	get_tree().change_scene_to_file(main_menu_scene_path)
-	
+
+func _process(delta: float) -> void:
+	if timer_active:
+		# 倒计时进行中
+		time_left -= delta
+		if score >= 200:
+			_on_game_won()
+		if time_left <= 0:
+			timer_active = false
+			print("You Lose! The pet is not happy yet.")
+			emit_signal("game_finished")
+
 signal game_finished
 func _on_game_won():
 	Global.add_reward(35, 0, 0)
