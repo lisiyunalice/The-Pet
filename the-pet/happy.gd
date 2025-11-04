@@ -48,9 +48,9 @@ func _on_timer_timeout():
 		Global.player_stats["happy"] -= 1
 		progress_bar.value = Global.player_stats["happy"]
 		Global.emit_signal("stats_changed")
-		print("Happy 变量减少，当前值为: ", Global.player_stats["happy"])
+		print("Happy: ", Global.player_stats["happy"])
 	else:
-		print("Happy 已经降到 0，不再减少。", "Your pet is dead.")
+		print("Happy 0", "Your pet is dead.")
 		timer.stop()
 		PetAlive = false
 		
