@@ -30,13 +30,11 @@ func _process(delta):
 			label.text = "Time's up!"
 			game_active = false
 			start_button.disabled = false
+			
+	if Input.is_action_just_pressed("space"):
+		score += 1
 
-func _input(event):
-	# 当倒计时进行中，按空格键则饥饿值 +1
-	if game_active and event.is_action_pressed("ui_accept") and timer.time_left > 0:
-		hunger += 1
-		hunger = clamp(hunger, 0, bar.max_value)
-		bar.value = hunger
+
 
 func _on_CountdownTimer_timeout():
 	# 倒计时结束
@@ -57,12 +55,83 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_countdown_timer_timeout() -> void:
-	pass # Replace with function body.
-	game_active = false
-	label.text = "Time's up!"
-	start_button.disabled = false
+	gametimes += 1
+	if gametimes == 1:
+		$chicken1.queue_free()
+		timer.start()
+		label.text = "1"
+		score=0
+	elif gametimes == 2:
+		$chicken2.queue_free()
+		timer.start()
+		label.text = "2"
+		score=0
+		
+	elif gametimes == 3:
+		$chicken3.queue_free()
+		timer.start()
+		label.text = "3"
+		score=0
+	elif gametimes == 4:
+		$chicken4.queue_free()
+		timer.start()
+		label.text = "4"
+		score=0
+		game_active = false
+		label.text = "Time's up!"
+		start_button.disabled = false
+
+func updata():
+	if gametimes == 1:
+		
+		label.text = "1"
+		score=0
+		timer.start()
+	elif gametimes == 2:
+		
+		label.text = "2"
+		score=0
+		timer.start()
+	elif gametimes == 3:
+		
+		label.text = "3"
+		score=0
+		timer.start()
+	elif gametimes == 4:
+		
+		label.text = "4"
+		score=0
+	
+		game_active = false
+		
+		start_button.disabled = false
 
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://main scene.tscn")
+	pass # Replace with function body.
+
+
+
+func _on_texture_button_pressed() -> void:
+	pass # Replace with 	get_tree().change_scene_to_file("res://mainscene1102.tscn")function body.
+
+
+var score = 0:
+	set(v):
+		score = v
+		if not is_node_ready():
+			await ready
+		%HungerBar.value = v
+		if score == target:
+			score = 0
+			gametimes += 1
+			updata()
+			
+			
+var target = 10
+var gametimes = 0
+
+
+func _on_timer_timeout() -> void:
 	pass # Replace with function body.

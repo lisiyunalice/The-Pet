@@ -1,15 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://swnjheonun3p"]
+[gd_scene load_steps=10 format=3 uid="uid://swnjheonun3p"]
 
 [ext_resource type="Script" uid="uid://cmkdyttymnkef" path="res://minigames/hunger/HungerMiniGame.gd" id="1_xmiqa"]
+[ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://minigames/hunger/energy.png" id="2_28m4l"]
 [ext_resource type="Texture2D" uid="uid://da8l1v2rk63ni" path="res://minigames/hunger/pet background.jpg" id="2_b12xw"]
-[ext_resource type="Texture2D" uid="uid://b8pnfpwjdxbeo" path="res://energy.png" id="3_58y0q"]
-[ext_resource type="Texture2D" uid="uid://beh50xsnosg5i" path="res://chicken.PNG" id="4_p8pt1"]
+[ext_resource type="Texture2D" uid="uid://c57fej47adq38" path="res://minigames/Energy/assets/restart.png" id="3_0cw3m"]
+[ext_resource type="Texture2D" uid="uid://02arfat8h7s6" path="res://minigames/Energy/assets/Exit button.png" id="5_qipj6"]
+[ext_resource type="Texture2D" uid="uid://beh50xsnosg5i" path="res://chicken.PNG" id="6_twccw"]
+[ext_resource type="Texture2D" uid="uid://c8onv4gem36qv" path="res://minigames/hunger/chicken.PNG" id="7_yu010"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cw3m"]
+texture = ExtResource("3_0cw3m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28m4l"]
+texture = ExtResource("5_qipj6")
 
 [node name="HungerMiniGame" type="Node"]
 script = ExtResource("1_xmiqa")
 
 [node name="CountdownTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
+one_shot = true
 
 [node name="PetBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -18,60 +28,94 @@ scale = Vector2(0.977069, 0.977069)
 texture = ExtResource("2_b12xw")
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 300.0
-offset_top = 24.0
-offset_right = 492.0
-offset_bottom = 73.0
+offset_left = 285.50885
+offset_top = 33.189575
+offset_right = 461.50885
+offset_bottom = 82.189575
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 text = "Press Start to Begin
 "
 
 [node name="HungerBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 offset_left = 24.0
-offset_top = 28.0
-offset_right = 279.0
-offset_bottom = 55.0
+offset_top = 85.0
+offset_right = 201.0
+offset_bottom = 112.0
 max_value = 10.0
 
+[node name="Sprite2D" type="Sprite2D" parent="HungerBar"]
+position = Vector2(90, 89)
+scale = Vector2(0.063339934, 0.063339934)
+texture = ExtResource("2_28m4l")
+
 [node name="StartButton" type="Button" parent="."]
-offset_left = 226.0
-offset_top = 210.0
-offset_right = 369.0
-offset_bottom = 241.0
+offset_left = 262.0
+offset_top = 207.0
+offset_right = 405.0
+offset_bottom = 238.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0cw3m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0cw3m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0cw3m")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0cw3m")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0cw3m")
 text = "Start
 "
 
+[node name="PetBackground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(577.209, 358.813)
+scale = Vector2(0.977069, 0.977069)
+texture = ExtResource("2_b12xw")
+metadata/_edit_lock_ = true
+
 [node name="Button" type="Button" parent="."]
-offset_left = 143.0
-offset_top = 412.0
-offset_right = 188.0
-offset_bottom = 443.0
+offset_left = 95.0
+offset_top = 294.0
+offset_right = 197.0
+offset_bottom = 403.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_28m4l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_28m4l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_28m4l")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_28m4l")
+theme_override_styles/focus = SubResource("StyleBoxTexture_28m4l")
 text = "back"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(158, 106)
-scale = Vector2(0.101002, 0.0416967)
-texture = ExtResource("3_58y0q")
-
 [node name="chicken1" type="Sprite2D" parent="."]
-position = Vector2(450, 181)
-scale = Vector2(0.0645062, 0.0645062)
-texture = ExtResource("4_p8pt1")
+position = Vector2(449.99997, 181)
+scale = Vector2(0.061419718, 0.061419725)
+texture = ExtResource("6_twccw")
 
 [node name="chicken2" type="Sprite2D" parent="."]
-position = Vector2(542, 178)
-scale = Vector2(0.0641976, 0.0641976)
-texture = ExtResource("4_p8pt1")
+position = Vector2(544, 183)
+scale = Vector2(0.06203703, 0.062037036)
+texture = ExtResource("6_twccw")
 
 [node name="chicken3" type="Sprite2D" parent="."]
-position = Vector2(640, 178)
-scale = Vector2(0.0680556, 0.0680556)
-texture = ExtResource("4_p8pt1")
+position = Vector2(637.99994, 184)
+scale = Vector2(0.06458335, 0.06458335)
+texture = ExtResource("7_yu010")
 
 [node name="chicken4" type="Sprite2D" parent="."]
-position = Vector2(733, 178)
-scale = Vector2(0.0679012, 0.0679012)
-texture = ExtResource("4_p8pt1")
+position = Vector2(738.00006, 184)
+scale = Vector2(0.06435189, 0.06435188)
+texture = ExtResource("7_yu010")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -3596.0
+offset_top = -228.0
+offset_right = -1804.0
+offset_bottom = 1600.9177
+texture_normal = ExtResource("5_qipj6")
+stretch_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 13.0
+one_shot = true
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
