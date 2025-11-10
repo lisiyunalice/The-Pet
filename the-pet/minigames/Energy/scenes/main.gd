@@ -125,5 +125,5 @@ func _on_game_over_restart():
 signal game_finished
 
 func _on_game_won():
-	Global.add_reward(35, 0, 0)
+	Global.add_reward(0, 35, 0)
 	emit_signal("game_finished")  # 通知主场景移除自己

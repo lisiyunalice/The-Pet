@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6xt1pam4caki"]
 
-[ext_resource type="Script" uid="uid://bguc1prvd7iqy" path="res://scenes/bird.gd" id="1_jmxwj"]
-[ext_resource type="Texture2D" uid="uid://djspunysteqy3" path="res://assets/pig.PNG" id="2_b7mtg"]
-[ext_resource type="Texture2D" uid="uid://dfuofh4nwer0n" path="res://assets/bird1.png" id="2_cjltx"]
-[ext_resource type="Texture2D" uid="uid://533ubvnyvpxe" path="res://assets/bird2.png" id="3_rt77f"]
-[ext_resource type="Texture2D" uid="uid://cb3fw6j2c364v" path="res://assets/bird3.png" id="4_h1qdy"]
+[ext_resource type="Script" uid="uid://bguc1prvd7iqy" path="res://minigames/Energy/scenes/bird.gd" id="1_jmxwj"]
+[ext_resource type="Texture2D" uid="uid://beh50xsnosg5i" path="res://chicken.PNG" id="2_0w1dh"]
+[ext_resource type="Texture2D" uid="uid://dfuofh4nwer0n" path="res://minigames/Energy/assets/bird1.png" id="2_cjltx"]
+[ext_resource type="Texture2D" uid="uid://533ubvnyvpxe" path="res://minigames/Energy/assets/bird2.png" id="3_rt77f"]
+[ext_resource type="Texture2D" uid="uid://cb3fw6j2c364v" path="res://minigames/Energy/assets/bird3.png" id="4_h1qdy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hppq"]
 radius = 27.0
@@ -33,7 +33,7 @@ script = ExtResource("1_jmxwj")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(9.536743e-07, 1)
 scale = Vector2(0.043827157, 0.043827157)
-texture = ExtResource("2_b7mtg")
+texture = ExtResource("2_0w1dh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

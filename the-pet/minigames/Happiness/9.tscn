@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://kem0a8vr8ayx" path="res://minigames/Happiness/Treat.gd" id="1_ohhcp"]
 [ext_resource type="PackedScene" uid="uid://pphit1wrma2m" path="res://minigames/Happiness/10.tscn" id="2_ajkvh"]
-[ext_resource type="Texture2D" uid="uid://bmqar60bdjr8k" path="res://minigames/Happiness/balls/item318.png" id="3_ajkvh"]
 [ext_resource type="Texture2D" uid="uid://datg7tnucnoi1" path="res://minigames/Happiness/balls color/ball color.png" id="3_wdljg"]
+[ext_resource type="Texture2D" uid="uid://cybqmuf5n1li" path="res://minigames/Happiness/Assets2/Layer 9.png" id="4_wdljg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qd4q"]
 radius = 15.0
@@ -26,6 +26,6 @@ scale = Vector2(4.895834, 4.895834)
 texture = ExtResource("3_wdljg")
 
 [node name="Item318" type="Sprite2D" parent="triple-tier cake 9/BallColor"]
-position = Vector2(-1.3276589, -1.3276589)
-scale = Vector2(2.246808, 2.246808)
-texture = ExtResource("3_ajkvh")
+position = Vector2(0.30638325, -0.10212731)
+scale = Vector2(0.11522083, 0.115220934)
+texture = ExtResource("4_wdljg")

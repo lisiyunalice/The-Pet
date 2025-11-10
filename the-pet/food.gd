@@ -29,7 +29,7 @@ func _ready():
 	
 	# 创建计时器
 	timer = Timer.new()
-	timer.wait_time = 1  # 每 n 秒触发一次
+	timer.wait_time = 10  # 每 n 秒触发一次
 	timer.one_shot = false  # 不只执行一次，循环触发
 	timer.autostart = true  # 自动启动
 	add_child(timer)
@@ -48,9 +48,9 @@ func _on_timer_timeout():
 		Global.player_stats["food"] -= 1
 		progress_bar.value = Global.player_stats["food"]
 		Global.emit_signal("stats_changed")
-		print("Food 变量减少，当前值为: ", Global.player_stats["food"])
+		print("Food: ", Global.player_stats["food"])
 	else:
-		print("Food 已经降到 0，不再减少。", "Your pet is dead.")
+		print("Food 0", "Your pet is dead.")
 		timer.stop()
 		PetAlive = false
 		

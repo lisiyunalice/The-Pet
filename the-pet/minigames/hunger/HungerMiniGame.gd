@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 @onready var timer = $CountdownTimer
 @onready var label = $TimeLabel
@@ -7,9 +7,13 @@ extends Node2D
 
 var hunger = 0
 var game_active = false  # 控制是否能按空格
+var space_count := 0
+var winning := false
+var time_left := 20.0  # 倒计时秒数
+var timer_active := true  # 控制是否还能按空格
 
 func _ready():
-	label.text = "Press Start to Begin"
+	label.text = "Press Start to Begin. Keep hitting SPACE key to feed your chicken!"
 	bar.value = 0
 
 func _on_StartButton_pressed():
@@ -22,27 +26,45 @@ func _on_StartButton_pressed():
 	timer.start()
 
 func _process(delta):
-	# 每帧更新倒计时文字
+	var score1 = $Node.get_children().size()*25
+	if score1 >= 50:
+		$CanvasLayer/Panel/Label2.text = "you win"
+	else:
+		$CanvasLayer/Panel/Label2.text = "you lose"
+	$CanvasLayer/Panel/Label.text = "score:" + str($Node.get_children().size()*25)
 	if game_active:
 		if timer.time_left > 0:
 			label.text = str(int(ceil(timer.time_left)))
 		else:
-			label.text = "Time's up!"
-			game_active = false
-			start_button.disabled = false
-
-func _input(event):
-	# 当倒计时进行中，按空格键则饥饿值 +1
-	if game_active and event.is_action_pressed("ui_accept") and timer.time_left > 0:
-		hunger += 1
-		hunger = clamp(hunger, 0, bar.max_value)
-		bar.value = hunger
+			label.text = "Time's up! Try to be faster next time."
+			#game_active = false
+			#start_button.disabled = false
+	if timer_active:
+		# 倒计时进行中
+		time_left -= delta
+		if time_left <= 0:
+			timer_active = false
+			print("⏰Time's up......")
+		if Input.is_action_just_pressed("space"):
+			score += 1
+			space_count += 1
+		#print("按下空格次数: ", space_count)
+		# 检查是否达到40次
+			if space_count >= 40 and not winning:
+				winning = true
+				_on_game_won()
+				
+	else:
+		# 时间结束后，按空格不会再有反应
+		if Input.is_action_just_pressed("space"):
+			print("Time's up...Try again.")
 
 func _on_CountdownTimer_timeout():
 	# 倒计时结束
 	game_active = false
-	label.text = "Time's up!"
+	label.text = "Time's up! Try to be faster next time."
 	start_button.disabled = false
+	#emit_signal("game_finished")
 
 
 
@@ -57,12 +79,93 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_countdown_timer_timeout() -> void:
-	pass # Replace with function body.
-	game_active = false
-	label.text = "Time's up!"
-	start_button.disabled = false
+	gametimes += 1
+	if gametimes == 1:
+
+		%chicken1.queue_free()
+		timer.start()
+		label.text = "1"
+		score=0
+	elif gametimes == 2:
+		%chicken2.queue_free()
+		timer.start()
+		label.text = "2"
+		score=0
+		
+	elif gametimes == 3:
+		%chicken3.queue_free()
+		timer.start()
+		label.text = "3"
+		score=0
+	elif gametimes == 4:
+		%chicken4.queue_free()
+		
+		$CanvasLayer.show()
+		label.text = "4"
+		score=0
+		#game_active = false
+		label.text = "Time's up!"
+		start_button.disabled = false
+		winning = false
+
+func updata():
+	if gametimes == 1:
+		
+		label.text = "1"
+		score=0
+		timer.start()
+	elif gametimes == 2:
+		
+		label.text = "2"
+		score=0
+		timer.start()
+	elif gametimes == 3:
+		
+		label.text = "3"
+		score=0
+		timer.start()
+	elif gametimes == 4:
+		
+		label.text = "4"
+		score=0
+		
+		game_active = false
+		start_button.disabled = false
+		$CanvasLayer.show()
+
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://mainscene1102.tscn")
+	get_tree().change_scene_to_file("res://main scene.tscn")
 	pass # Replace with function body.
+
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://minigames/hunger/HungerMiniGame.tscn")
+
+
+var score = 0:
+	set(v):
+		score = v
+		if not is_node_ready():
+			await ready
+		%HungerBar.value = v
+		if score == target:
+			score = 0
+			gametimes += 1
+			updata()
+			
+			
+var target = 10
+var gametimes = 0
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
+
+
+signal game_finished
+func _on_game_won():
+	Global.add_reward(0, 0, 35)
+	emit_signal("game_finished")  # 通知主场景移除自己
